@@ -1,16 +1,22 @@
-// Server API makes it possible to hook into various parts of Gridsome
-// on server-side and add custom data to the GraphQL data layer.
-// Learn more: https://gridsome.org/docs/server-api/
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+const axios = require('axios')
 
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
-  })
+  api.loadSource(async actions => {
+    const { data } = await axios.get('http://md.local/wp-json/wp/v2/portfolio')
 
-  api.createPages(({ createPage }) => {
-    // Use the Pages API here: https://gridsome.org/docs/pages-api/
+    const collection = actions.addCollection('Portfolio')
+
+    for (const item of data) {
+      collection.addNode({
+        id: item.id,
+        title: item.title.rendered,
+        status: item.status,
+        content: item.content.rendered,
+        excerpt: item.excerpt.rendered,
+        slug: item.slug,
+        date: item.date,
+        featured_media: item.featured_media  
+      })
+    }
   })
 }

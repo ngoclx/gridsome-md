@@ -6,5 +6,8 @@
 
 module.exports = {
   siteName: 'Gridsome',
+  templates: {
+    Portfolio: '/portfolio/:slug',
+  },
   plugins: []
 }
