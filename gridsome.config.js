@@ -3,11 +3,11 @@
 // http://localhost:8080/service-provided/accessibility
 
 module.exports = {
-  siteName: 'Gridsome',
+  siteName: 'Marameo Design',
   templates: {
     WpPortfolio: '/portfolio/:slug',
-    // WpIndustrySection: '/industry-section/:slug',
-    // WpServiceProvided: '/service-provided/:slug'
+    WpIndustrySection: '/industry-section/:slug',
+    WpServiceProvide: '/service-provided/:slug'
   },
   plugins: [
     {

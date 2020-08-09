@@ -1,7 +1,6 @@
 <template>
   <article
     class="hoverEffect cardClick"
-    id="post-274"
     itemtype="https://schema.org/CreativeWork"
     itemscope=""
   >
@@ -17,22 +16,7 @@
       </header>
       <div class="post-image" >
         <div class="in-post-image" >
-          <img
-            width="190"
-            height="300"
-            src="http://dev.marameodesign.com/wp-content/uploads/2020/08/THE-GEORGE-INSTITUTE-Screen-190x300.png"
-            class="attachment-medium size-medium wp-post-image"
-            alt="THE GEORGE INSTITUTE Screen"
-            itemprop="image"
-            srcset="
-              http://dev.marameodesign.com/wp-content/uploads/2020/08/THE-GEORGE-INSTITUTE-Screen-190x300.png    190w,
-              http://dev.marameodesign.com/wp-content/uploads/2020/08/THE-GEORGE-INSTITUTE-Screen-649x1024.png   649w,
-              http://dev.marameodesign.com/wp-content/uploads/2020/08/THE-GEORGE-INSTITUTE-Screen-768x1212.png   768w,
-              http://dev.marameodesign.com/wp-content/uploads/2020/08/THE-GEORGE-INSTITUTE-Screen-973x1536.png   973w,
-              http://dev.marameodesign.com/wp-content/uploads/2020/08/THE-GEORGE-INSTITUTE-Screen-1298x2048.png 1298w
-            "
-            sizes="(max-width: 190px) 100vw, 190px"
-          />
+          <g-image :src="node.featuredMedia.sourceUrl" width="190" height="300" class="attachment-medium size-medium wp-post-image" />
         </div>
       </div>
       <div class="entry-summary" itemprop="text" v-html="node.excerpt" />
@@ -64,6 +48,6 @@ export default {
       type: Object,
       required: true,
     }
-  },
+  }
 };
 </script>

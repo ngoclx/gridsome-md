@@ -1,17 +1,17 @@
 <template>
   <Layout>
-    <portfolio-category name="industry-section" :categoryTitle="'Industry Section: ' + $page.industrySection.title" :portfolios="$page.industrySection.belongsTo.edges" />
+    <portfolio-category name="service-provide" :categoryTitle="'Service Provided: ' + $page.wpServiceProvide.title" :portfolios="$page.wpServiceProvide.belongsTo.edges" />
   </Layout>
 </template>
 
 <page-query>
 query ($path: String!) {
-  industrySection(path: $path) {
+  wpServiceProvide(path: $path) {
     title
     belongsTo {
       edges {
         node {
-          ... on Portfolio {
+          ... on WpPortfolio {
             id
             title
             path
@@ -28,7 +28,7 @@ query ($path: String!) {
 import PortfolioCategory from "~/components/PortfolioCategory.vue";
 
 export default {
-  name: "IndustrySection",
+  name: "WpServiceProvide",
   components: {
     PortfolioCategory
   }
