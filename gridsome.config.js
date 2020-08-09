@@ -1,13 +1,11 @@
-// This is where project configuration and plugin options are located.
-// Learn more: https://gridsome.org/docs/config
-
-// Changes here require a server restart.
-// To restart press CTRL + C in terminal and run `gridsome develop`
+// http://localhost:8080/industry-section/education/
+// http://localhost:8080/portfolio/artsfile-3/
 
 module.exports = {
   siteName: 'Gridsome',
   templates: {
     Portfolio: '/portfolio/:slug',
+    IndustrySection: '/industry-section/:slug'
   },
   plugins: []
 }

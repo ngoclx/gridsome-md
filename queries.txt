@@ -1,0 +1,105 @@
+query {
+  allPortfolio {
+    edges {
+	  node {
+	    id
+		title
+		slug
+		content
+	  }
+	}
+  }
+}
+
+
+query {
+  portfolio (path: "/porfolio/ridbc-2/") {
+     id
+		title
+		slug
+		content
+  }
+}
+
+
+query {
+  industrySection (path: "/industry-section/education/") {
+     id
+		title
+		slug
+  }
+}
+
+
+query {
+  allIndustrySection  {
+     edges {
+	  node {
+	    id
+		title
+		slug
+      path
+	  }
+	}
+  }
+}
+
+
+
+query {
+  industrySection (path: "/industry-section/education/") {
+     id
+		title
+		slug
+    
+    belongsTo {
+      edges {
+        node {
+          ... on Portfolio {
+            id
+            title
+            path
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+const axios = require('axios')
+
+module.exports = function (api) {
+  api.loadSource(async actions => {
+    // Import industry terms
+    // const { insec_data } = await axios.get('http://md.local/wp-json/wp/v2/portfolio')
+    // const industry_sections = actions.addCollection('IndustrySection')
+    // console.log(insec_data)
+    // for (const item of insec_data) {
+    //   industry_sections.addNode({
+    //     id: item.id,
+    //     title: item.name,        
+    //     slug: item.slug
+    //   })
+    // }
+
+    // Import porfolio posts
+    const { porfolios_data } = await axios.get('http://md.local/wp-json/wp/v2/portfolio')
+    const portfolios = actions.addCollection('Portfolio')
+    // portfolios.addReference('industry_sections', 'IndustrySection')
+    for (const item of porfolios_data) {
+      portfolios.addNode({
+        id: item.id,
+        title: item.title.rendered,
+        status: item.status,
+        content: item.content.rendered,
+        excerpt: item.excerpt.rendered,
+        slug: item.slug,
+        date: item.date,
+        featured_media: item.featured_media  
+      })
+    }
+  })
+}
