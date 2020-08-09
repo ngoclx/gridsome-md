@@ -32,10 +32,6 @@ export default {
       type: Array,
       required: true,
     }
-  },
-  // mounted () {
-  //   console.log(666)
-  //   console.log(this.portfolios)
-  // }
+  }
 };
 </script>

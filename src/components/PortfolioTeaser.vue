@@ -7,11 +7,11 @@
     <div class="inside-article" >
       <header class="entry-header" >
         <h2 class="entry-title" itemprop="headline" >
-          <a
-            :href="node.path"
+          <g-link
+            :to="node.path"
             rel="bookmark noopener noreferrer"
             data-wpel-link="internal"
-            v-html="node.title" />
+            >{{ node.title }}</g-link>
         </h2>
       </header>
       <div class="post-image" >
@@ -21,8 +21,8 @@
       </div>
       <div class="entry-summary" itemprop="text" v-html="node.excerpt" />
       <p>
-        <a
-          :href="node.path"
+        <g-link
+          :to="node.path"
           class="read-more"
           data-wpel-link="internal"
           rel="noopener noreferrer"  
@@ -33,8 +33,7 @@
           ></i
           ><span class="sr-only" >
             of the post "{{ node.title }}"</span
-          ></a
-        >
+          ></g-link>
       </p>
     </div>
   </article>
@@ -48,6 +47,10 @@ export default {
       type: Object,
       required: true,
     }
+  },
+  mounted () {
+    console.log(777)
+    console.log(this.node)
   }
 };
 </script>
