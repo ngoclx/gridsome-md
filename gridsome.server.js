@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 module.exports = function (api) {
-
+/*
   // Import industry terms
   api.loadSource(async actions => {
     const { data } = await axios.get('http://md.local/wp-json/wp/v2/industry_section')
@@ -51,4 +51,5 @@ module.exports = function (api) {
        })
      }
   })
+*/
 }

@@ -1,0 +1,8 @@
+https://www.npmjs.com/package/@gridsome/source-wordpress
+
+Deployment via netify: https://youtu.be/vy39yigro_8?t=1948
+
+Free CDN from cloudflare: https://www.wpbeginner.com/wp-tutorials/how-to-setup-cloudflare-free-cdn-in-wordpress/#:~:text=Cloudflare%20is%20one%20of%20the,features%20for%20small%20business%20websites.
+https://www.hostinger.com/tutorials/how-to-setup-cloudflare-for-wordpress
+https://dieuhau.com/cai-dat-cloudflare-cdn-free/
+
