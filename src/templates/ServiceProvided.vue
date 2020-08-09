@@ -1,13 +1,6 @@
 <template>
   <Layout>
-    <h1>{{ $page.serviceProvided.title }}</h1>
-    <ul>
-      <li v-for="edge in $page.serviceProvided.belongsTo.edges" :key="edge.node.id">
-        <g-link :to="edge.node.path">
-          {{ edge.node.title }}
-        </g-link>
-      </li>
-    </ul>
+    <portfolio-category name="service-provided" :categoryTitle="'Service Provided: ' + $page.serviceProvided.title" :portfolios="$page.serviceProvided.belongsTo.edges" />
   </Layout>
 </template>
 
@@ -29,3 +22,14 @@ query ($path: String!) {
   }
 }
 </page-query>
+
+<script>
+import PortfolioCategory from "~/components/PortfolioCategory.vue";
+
+export default {
+  name: "ServiceProvided",
+  components: {
+    PortfolioCategory
+  }
+};
+</script>
