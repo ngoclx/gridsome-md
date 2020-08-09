@@ -1,13 +1,6 @@
 <template>
   <Layout>
-    <h1>{{ $page.industrySection.title }}</h1>
-    <ul>
-      <li v-for="edge in $page.industrySection.belongsTo.edges" :key="edge.node.id">
-        <g-link :to="edge.node.path">
-          {{ edge.node.title }}
-        </g-link>
-      </li>
-    </ul>
+    <portfolio-category name="industry-section" :categoryTitle="'Industry Section: ' + $page.industrySection.title" :portfolios="$page.industrySection.belongsTo.edges" />
   </Layout>
 </template>
 
@@ -22,6 +15,7 @@ query ($path: String!) {
             id
             title
             path
+            excerpt
           }
         }
       }
@@ -29,3 +23,14 @@ query ($path: String!) {
   }
 }
 </page-query>
+
+<script>
+import PortfolioCategory from "~/components/PortfolioCategory.vue";
+
+export default {
+  name: "IndustrySection",
+  components: {
+    PortfolioCategory
+  }
+};
+</script>
