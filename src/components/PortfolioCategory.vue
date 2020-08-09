@@ -33,9 +33,9 @@ export default {
       required: true,
     }
   },
-  mounted () {
-    console.log(666)
-    console.log(this.portfolios)
-  }
+  // mounted () {
+  //   console.log(666)
+  //   console.log(this.portfolios)
+  // }
 };
 </script>

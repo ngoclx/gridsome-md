@@ -16,6 +16,12 @@ query ($path: String!) {
             title
             path
             excerpt
+            featuredMedia { 
+              id
+              sourceUrl
+              title
+              altText
+            }
           }
         }
       }
