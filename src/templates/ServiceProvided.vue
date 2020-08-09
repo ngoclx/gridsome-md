@@ -15,6 +15,7 @@ query ($path: String!) {
             id
             title
             path
+            excerpt
           }
         }
       }
