@@ -14,12 +14,16 @@
 query WpPortfolio ($path: String!) {
   wpPortfolio (path: $path) {
     id
-		title
-		slug
+    title
+    slug
+    path
+    excerpt
     content
     relatedPortfolios { 
       id
       slug
+      title
+      path
       excerpt
       featuredMedia {
         id
@@ -39,6 +43,9 @@ export default {
   name: "WpPortfolio",
   components: {
     PortfolioRelated,
+  },
+  mounted() {
+    console.log(this.$page.wpPortfolio)
   }
 };
 </script>

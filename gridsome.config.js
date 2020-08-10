@@ -20,7 +20,13 @@ module.exports = {
         typeName: 'Wp',
         perPage: 20,
         concurrent: 10
-      }
+      },
+      customEndpoints: [
+        {
+          typeName: "WPMenu",
+          route: 'menus/v1/menus',
+        }
+      ]
     },
 
     // This package downloads "some?" images but not recommended? We better go for CDN solution.
