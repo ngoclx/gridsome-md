@@ -47,10 +47,6 @@ export default {
       type: Object,
       required: true,
     }
-  },
-  mounted () {
-    console.log(777)
-    console.log(this.node)
   }
 };
 </script>

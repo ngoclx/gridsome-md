@@ -6,3 +6,10 @@ Free CDN from cloudflare: https://www.wpbeginner.com/wp-tutorials/how-to-setup-c
 https://www.hostinger.com/tutorials/how-to-setup-cloudflare-for-wordpress
 https://dieuhau.com/cai-dat-cloudflare-cdn-free/
 
+
+
+https://www.codegram.com/blog/powering-up-static-sites-with-gridsome-taxonomies/
+
+
+
+https://www.apollographql.com/docs/apollo-server/schema/schema/

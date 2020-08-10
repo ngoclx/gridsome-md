@@ -228,3 +228,26 @@ module.exports = function (api) {
 }
 
 
+
+query Tag ($path: String!, $page: Int) {
+  category (path: $path) {
+    title
+    belongsTo (perPage: 2, page: $page) @paginate {
+      pageInfo {
+        totalPages
+        currentPage
+      }
+      edges {
+        node {
+          ...on Post {
+            id
+            title
+            path
+          }
+        }
+      }
+    }
+  }
+}
+
+

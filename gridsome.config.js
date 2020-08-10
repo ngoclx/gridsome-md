@@ -1,6 +1,8 @@
 // http://localhost:8080/portfolio/artsfile-3/
 // http://localhost:8080/industry-section/education/
 // http://localhost:8080/service-provided/accessibility
+// https://dev.marameodesign.com/wp-json/wp/v2/media
+
 
 module.exports = {
   siteName: 'Marameo Design',
@@ -16,7 +18,7 @@ module.exports = {
         baseUrl: 'https://dev.marameodesign.com', // required
         apiBase: 'wp-json',
         typeName: 'Wp',
-        perPage: 100,
+        perPage: 20,
         concurrent: 10
       }
     },
