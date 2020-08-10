@@ -19,14 +19,16 @@ module.exports = {
         apiBase: 'wp-json',
         typeName: 'Wp',
         perPage: 20,
-        concurrent: 10
+        concurrent: 10,
+        customEndpoints: [
+          {
+            typeName: "WPMenu",
+            route: 'menus/all', // Custom menu rest api endpoint, check helpers.api.php
+            // - this should be included to your theme or just a new plugin.
+            // Maybe a plugin is good!
+          }
+        ]
       },
-      customEndpoints: [
-        {
-          typeName: "WPMenu",
-          route: 'menus/v1/menus',
-        }
-      ]
     },
 
     // This package downloads "some?" images but not recommended? We better go for CDN solution.
