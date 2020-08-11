@@ -9,7 +9,8 @@ module.exports = {
   templates: {
     WpPortfolio: '/portfolio/:slug',
     WpIndustrySection: '/industry-section/:slug',
-    WpServiceProvide: '/service-provided/:slug'
+    WpServiceProvide: '/service-provided/:slug',
+    WpPage: '/:slug',
   },
   plugins: [
     {
@@ -23,28 +24,14 @@ module.exports = {
         customEndpoints: [
           {
             typeName: "WPMenu",
-            route: 'menus/all', // Custom menu rest api endpoint, check helpers.api.php
+
+            // Custom menu rest api endpoint, check helpers.api.php
             // - this should be included to your theme or just a new plugin.
             // Maybe a plugin is good!
+            route: 'menus/all',
           }
-        ]
+        ],
       },
     },
-
-    // This package downloads "some?" images but not recommended? We better go for CDN solution.
-    // {
-    //   use: 'gridsome-source-wordpress',
-    //   options: {
-    //     baseUrl: 'https://dev.marameodesign.com', // required
-    //     apiBase: 'wp-json',
-    //     typeName: 'Pi',
-    //     perPage: 100,
-    //     concurrent: 10,
-    //     splitPostsIntoFragments: false, // default false
-    //     downloadRemoteImagesFromPosts: true, // default false
-    //     downloadRemoteFeaturedImages: true, // default false
-    //     downloadACFImages: true, // default false
-    //   }
-    // }
   ]
 }

@@ -13,3 +13,6 @@ https://www.codegram.com/blog/powering-up-static-sites-with-gridsome-taxonomies/
 
 
 https://www.apollographql.com/docs/apollo-server/schema/schema/
+
+
+https://github.com/pehaa/gridsome-starter-wordpress-bootstrap

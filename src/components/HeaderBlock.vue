@@ -17,7 +17,7 @@
           </h1>
         </div>
 
-        <navbar name="navigation-bar" />
+        <!-- <navbar name="navigation-bar" /> -->
 
       </div>
     </header>
