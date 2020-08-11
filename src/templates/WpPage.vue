@@ -27,7 +27,7 @@ query WpPage ($path: String!) {
 export default {
   name: "WpPage",
   created() {
-    console.log(this.$page.wpPage)
+    // console.log(this.$page.wpPage)
   }
 };
 </script>
