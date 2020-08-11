@@ -1,30 +1,66 @@
 <template>
-  <g-link
-    :to="link"
-    v-html="title"
-    class="mega-menu-link"
-    data-wpel-link="internal"
-    rel="noopener noreferrer"
+  <li
+    :class="wrapperClasses + node.classes"
+  >
+    <g-link
+      :to="node.url"
+      v-html="node.title"
+      class="mega-menu-link"
+      data-wpel-link="internal"
+      rel="noopener noreferrer"
+      v-if="(node.item_type === 'link')"
     />
+
+    <button
+      class="mega-indicator mega-indicator-button top-level d-xl-none"
+      v-if="hasChild && node.item_type == 'link'"
+    >
+      <span class="sr-only">{{ node.title }} submenu</span>
+    </button>
+
+    <submenu :items="node.child_items" v-if="hasChild  && node.item_type == 'link'" />
+
+    <div
+    v-html="node.copy"
+    v-if="(node.item_type === 'html')" />
+
+  </li>
 </template>
 
 <script>
+import Submenu from "~/components/Submenu.vue";
 
 export default {
   name: "MenuItem",
+  components: {
+    Submenu
+  },
   props: {
-    link: {
-      type: String,
+    node: {
+      type: Object,
       required: true,
     },
-    title: {
-      type: String,
-      required: true,
+  },
+  computed: {
+    wrapperClasses() {
+      if (this.node.item_type == 'link' || this.node.item_type == 'html') {
+        if (typeof this.node.child_items != 'undefined' && this.node.child_items.length) {
+          return "mega-menu-item mega-menu-megamenu mega-align-bottom-left mega-menu-item-has-children mega-with-button mega-menu-grid js "
+        } else {
+          return "mega-menu-item mega-menu-megamenu mega-align-bottom-left "
+        }
+      }
+      else if (this.node.item_type == 'column') {
+        return "mega-menu-column mega-menu-columns-3-of-12 "
+      }
     },
-    children: {
-      type: Array,
-      required: true,
+    hasChild() {
+      return typeof this.node.child_items != 'undefined' && this.node.child_items.length;
     }
-  }
+  },
+  // mounted() {
+  //   console.log('iteeem')
+  //   console.log(this.node);
+  // },
 };
 </script>

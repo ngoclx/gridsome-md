@@ -4,8 +4,10 @@
 import '~/style.css'
 
 import DefaultLayout from '~/layouts/Default.vue'
+import MenuItem from '~/components/MenuItem.vue'
 
 export default function (Vue, { router, head, isClient }) {
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
+  Vue.component('MenuItem', MenuItem)
 }

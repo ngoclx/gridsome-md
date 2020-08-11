@@ -36,39 +36,11 @@
                     id="mega-menu-primary"
                     class="mega-menu max-mega-menu mega-menu-horizontal"
                   >
-                    <li
-                      :class="
-                        'mega-menu-item mega-align-bottom-left mega-menu-flyout ' +
-                          item.classes
-                      "
+                    <menu-item
                       v-for="item in this.$static.wpMenu.items"
+                      :node="item"
                       :key="item.key"
-                    >
-                      <menu-item
-                        :link="item.url"
-                        :title="item.title"
-                        v-if="(item.type = 'link')"
-                      />
-
-                      <button
-                        class="mega-indicator mega-indicator-button top-level d-xl-none"
-                        aria-expanded="false"
-                        v-if="item.child_items"
-                      >
-                        <span
-                          class="sr-only"
-                          v-html="item.title + ' submenu'"
-                        />
-                      </button>
-
-                      <ul class="mega-sub-menu" v-if="item.child_items">
-                        <li class="mega-menu-row">
-                          <ul class="mega-sub-menu">
-                            
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
+                    />
                   </ul>
                 </div>
               </div>
@@ -118,15 +90,7 @@ query {
 </static-query>
 
 <script>
-import MenuItem from "~/components/MenuItem.vue";
-
 export default {
-  name: "Navbar",
-  components: {
-    MenuItem,
-  },
-  mounted() {
-    console.log(this.$static);
-  },
+  name: "Navbar"
 };
 </script>
