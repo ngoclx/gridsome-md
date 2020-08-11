@@ -36,7 +36,7 @@ query {
 import Navbar from "~/components/Navbar.vue";
 
 export default {
-  name: "Layout",
+  name: "HeaderBlock",
   components: {
     Navbar,
   },
