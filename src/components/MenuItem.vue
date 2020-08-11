@@ -3,13 +3,14 @@
     :class="wrapperClasses + node.classes"
   >
     <g-link
-      :to="node.url"
-      v-html="node.title"
+      :to="pathname"
       class="mega-menu-link"
       data-wpel-link="internal"
       rel="noopener noreferrer"
       v-if="(node.item_type === 'link')"
-    />
+    >
+    {{ node.title }}
+    </g-link>
 
     <button
       class="mega-indicator mega-indicator-button top-level d-xl-none"
@@ -56,6 +57,10 @@ export default {
     },
     hasChild() {
       return typeof this.node.child_items != 'undefined' && this.node.child_items.length;
+    },
+    pathname() {
+      var url = new URL(this.node.url);
+      return url.pathname;
     }
   },
   // mounted() {
