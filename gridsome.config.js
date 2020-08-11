@@ -6,11 +6,48 @@
 
 module.exports = {
   siteName: 'Marameo Design',
+
+  // Rebuild the project when adding a new route definition (templates)
   templates: {
+
     WpPortfolio: '/portfolio/:slug',
     WpIndustrySection: '/industry-section/:slug',
     WpServiceProvide: '/service-provided/:slug',
-    WpPage: '/:slug',
+
+    WpInsights: '/insights/:slug',
+
+    // Define multiple alias for the same entity (page)
+    WpPage: [
+      {
+        path: '/:slug',
+        component: './src/templates/WpPage.vue'
+      },
+
+      {
+        name: 'services',
+        path: '/services/:slug',
+        component: './src/templates/WpPage.vue'
+      },
+
+      {
+        name: 'strategy-services',
+        path: '/services/strategy-services/:slug',
+        component: './src/templates/WpPage.vue'
+      },
+
+      {
+        name: 'support-maintenance',
+        path: '/services/support-maintenance/:slug',
+        component: './src/templates/WpPage.vue'
+      },
+ 
+      {
+        name: 'web-design',
+        path: '/services/web-design/:slug',
+        component: './src/templates/WpPage.vue'
+      },
+
+    ]
   },
   plugins: [
     {

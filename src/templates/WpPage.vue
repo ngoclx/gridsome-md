@@ -22,6 +22,7 @@ query WpPage ($path: String!) {
 </page-query>
 
 <script>
+// import PageRelated from "~/components/PageRelated.vue";
 
 export default {
   name: "WpPage",
