@@ -6,8 +6,7 @@
           <nav
             id="site-navigation"
             aria-label="Main navigation"
-            class="main-navigation"
-          >
+            class="main-navigation">
             <div class="container">
               <div class="inside-navigation grid-container grid-parent">
                 <div id="mega-menu-wrap-primary" class="mega-menu-wrap">
@@ -18,57 +17,23 @@
                       <div
                         class="mega-toggle-block mega-menu-toggle-block mega-toggle-block-1"
                         id="mega-toggle-block-1"
-                        tabindex="0"
-                      >
+                        tabindex="0">
                         <span
                           class="mega-toggle-label"
                           role="button"
                           aria-expanded="false"
                           ><span class="mega-toggle-label-closed">MENU</span
-                          ><span class="mega-toggle-label-open"
-                            >MENU</span
-                          ></span
+                          ><span class="mega-toggle-label-open">MENU</span></span
                         >
                       </div>
                     </div>
                   </div>
+
                   <ul
                     id="mega-menu-primary"
-                    class="mega-menu max-mega-menu mega-menu-horizontal"
+                    class="mega-menu max-mega-menu mega-menu-horizontal"                
                   >
-                    <li
-                      :class="
-                        'mega-menu-item mega-align-bottom-left mega-menu-flyout ' +
-                          item.classes
-                      "
-                      v-for="item in this.$static.wpMenu.items"
-                      :key="item.key"
-                    >
-                      <menu-item
-                        :link="item.url"
-                        :title="item.title"
-                        v-if="(item.type = 'link')"
-                      />
-
-                      <button
-                        class="mega-indicator mega-indicator-button top-level d-xl-none"
-                        aria-expanded="false"
-                        v-if="item.child_items"
-                      >
-                        <span
-                          class="sr-only"
-                          v-html="item.title + ' submenu'"
-                        />
-                      </button>
-
-                      <ul class="mega-sub-menu" v-if="item.child_items">
-                        <li class="mega-menu-row">
-                          <ul class="mega-sub-menu">
-                            
-                          </ul>
-                        </li>
-                      </ul>
-                    </li>
+                  
                   </ul>
                 </div>
               </div>
@@ -108,7 +73,16 @@ query {
           title
           classes
           guid
-          url          
+          url
+          child_items {
+            item_type
+            image
+            copy
+            title
+            classes
+            guid
+            url
+          }
         }
       }
     }
@@ -118,15 +92,15 @@ query {
 </static-query>
 
 <script>
-import MenuItem from "~/components/MenuItem.vue";
+// import PortfolioTeaser from "~/components/PortfolioTeaser.vue";
 
 export default {
   name: "Navbar",
-  components: {
-    MenuItem,
-  },
-  mounted() {
+  // components: {
+  //   PortfolioTeaser,
+  // },
+  mounted () {
     console.log(this.$static);
-  },
+  }
 };
 </script>
