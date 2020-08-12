@@ -16,3 +16,5 @@ https://www.apollographql.com/docs/apollo-server/schema/schema/
 
 
 https://github.com/pehaa/gridsome-starter-wordpress-bootstrap
+
+https://github.com/LokeCarlsson/gridsome-starter-bootstrap

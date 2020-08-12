@@ -5,7 +5,7 @@
 import '~/css/maxmegamenu/style.css'
 import '~/style.css'
 
-import 'jquery/src/jquery.js'
+import 'jquery/dist/jquery.min.js'
 import 'bootstrap/dist/js/bootstrap.min.js'
 
 
