@@ -23,8 +23,9 @@
 </template>
 
 <page-query>
+
 query allWpPortfolio($page: Int) {
-  portfolios: allWpPortfolio(perPage: 12, page: $page) @paginate {
+  portfolios: allWpPortfolio(perPage: 3, page: $page) @paginate {
     pageInfo {
       totalPages
       currentPage
