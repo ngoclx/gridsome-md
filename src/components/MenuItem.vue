@@ -79,7 +79,18 @@ export default {
   .main-navigation #mega-menu-primary>li.mega-menu-item.mega-menu-item-has-children .mega-menu-column .mega-menu-item{
     padding: 0!important
   }
+  .main-navigation #mega-menu-primary li.mega-menu-item p{
+    text-transform: inherit!important;
+    color: #045499!important;
+    font-size: 1.8rem!important;
+    font-weight: 700!important;
+    margin-bottom: .5rem!important;
+    font-family: Nunito,sans-serif!important;
+  }
   @media (min-width: 1200px){
+    .main-navigation #mega-menu-primary li.mega-menu-item p{
+      color: #045499!important;
+    }
     .main-navigation #mega-menu-primary>li.mega-menu-item.mega-menu-item-has-children>.mega-sub-menu{
           width: 88rem!important;
         left: 26rem!important;
@@ -88,6 +99,19 @@ export default {
         padding: 2rem 2rem 2.5rem!important;
         border: 1px solid #ccc!important;
         border-top: 4px solid #0caade!important;
+    }
+    #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{
+      padding-bottom: 3rem !important;
+    }
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu.mega-menu-item.mega-menu-item-has-children >ul.mega-sub-menu{
+      top: 40px;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+    .main-navigation #mega-menu-primary>li.mega-menu-item.mega-menu-item-has-children>a.mega-menu-link:before{
+      transition: opacity .3s ease-in,visibility .3s ease-in;
     }
   }
 </style>
