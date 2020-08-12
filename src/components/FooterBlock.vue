@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="site-footer">
     <div class="fat-section">
       <div class="container">
         <div class="row">
