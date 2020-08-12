@@ -12,5 +12,10 @@
     "axios": "^0.19.2",
     "gridsome": "^0.7.0",
     "gridsome-source-wordpress": "^0.4.13"
+  },
+  "devDependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }
