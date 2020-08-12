@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div>
-      <h1>Case studies</h1>
+      <case-studies-banner />
 
       <ul class="row post-list">
         <li
@@ -18,6 +18,9 @@
         linkClass="page-link rounded"
         class="pagination justify-content-center"
       />
+
+      <latest-insights-block />
+
     </div>
   </Layout>
 </template>
@@ -49,11 +52,15 @@ query allWpPortfolio($page: Int) {
 </page-query>
 
 <script>
+import CaseStudiesBanner from "~/components/CaseStudiesBanner.vue";
 import PortfolioTeaser from "~/components/PortfolioTeaser.vue";
+import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue";
 import { Pager } from "gridsome";
 
 export default {
   components: {
+    LatestInsightsBlock,
+    CaseStudiesBanner,
     PortfolioTeaser,
     Pager,
   },
