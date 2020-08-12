@@ -1,4 +1,6 @@
 <template>
+  <div>
+  <calendar-block />
   <footer class="site-footer">
     <div class="fat-section">
       <div class="container">
@@ -133,6 +135,7 @@
       </div>
     </div>
   </footer>
+  </div>
 </template>
 
 <static-query>
@@ -174,11 +177,12 @@ query {
 
 <script>
 // import Navbar from "~/components/Navbar.vue";
+import CalendarBlock from "~/components/CalendarBlock.vue";
 
 export default {
   name: "FooterBlock",
   components: {
-    // Navbar,
+     CalendarBlock,
   },
   filters: {
     pathname: function (value) {
