@@ -9,7 +9,9 @@
   </div>
 </template>
 
-
+<style>
+  @import 'https://use.fontawesome.com/releases/v5.9.0/css/all.css';
+</style>
 <script>
 import HeaderBlock from "~/components/HeaderBlock.vue";
 import FooterBlock from "~/components/FooterBlock.vue";

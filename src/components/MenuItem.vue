@@ -33,9 +33,6 @@ import Submenu from "~/components/Submenu.vue";
 
 export default {
   name: "MenuItem",
-  data:{
-    isHovering: false
-  },
   components: {
     Submenu
   },
