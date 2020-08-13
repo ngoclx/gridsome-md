@@ -51,6 +51,9 @@
 
 <script>
 export default {
-  name: "calendar-block"
+  name: "calendar-block",
+  metaInfo: {
+    script: [{ src: "https://assets.calendly.com/assets/external/widget.js", async: true, defer: true }],
+  }
 };
 </script>
