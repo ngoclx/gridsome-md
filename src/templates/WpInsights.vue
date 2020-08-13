@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div>
-      <h1 v-html="$page.wpInsights.title" />
+      <h1 class="d-none" v-html="$page.wpInsights.title" />
 
       <div v-html="$page.wpInsights.content" />
     </div>

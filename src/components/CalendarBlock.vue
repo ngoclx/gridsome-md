@@ -1,5 +1,6 @@
 <template>
   <div class="book-project margin-negative">
+    <span id="calendar-lib" />
     <div class="container">
         <div class="in-book-project">
             <div class="row">
@@ -50,9 +51,6 @@
 
 <script>
 export default {
-  name: "calendar-block",
-  metaInfo: {
-    script: [{ src: "https://assets.calendly.com/assets/external/widget.js", async: true, defer: true }],
-  }
+  name: "calendar-block"
 };
 </script>
