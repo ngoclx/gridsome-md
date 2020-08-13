@@ -21,9 +21,11 @@ import '~/style.css'
 // import 'jquery/dist/jquery.slim.min.js'
 // import 'popper.js/dist/popper.min.js'
 // import 'bootstrap/dist/js/bootstrap.min.js'
-import 'jquery'
-import 'propper.js'
-import 'bootstrap'
+import bootstrap from 'bootstrap'
+import jQuery from 'jquery'
+import Popper from 'popper'
+global.jQuery = jQuery;
+global.Popper = Popper;
 
 
 // import BootstrapVue from 'bootstrap-vue'
