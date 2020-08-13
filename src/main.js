@@ -12,7 +12,7 @@ import '~/style.css'
 // import 'bootstrap/dist/js/bootstrap.min.js'
 // import '~/js/calendar.js'
 
-import BootstrapVue from 'bootstrap-vue'
+// import BootstrapVue from 'bootstrap-vue'
 
 
 
@@ -22,7 +22,7 @@ import MenuItem from '~/components/MenuItem.vue'
 
 export default function(Vue, { router, head, isClient }) {
     // Set default layout as a global component
-    Vue.use(BootstrapVue)
+    // Vue.use(BootstrapVue)
     Vue.component('Layout', DefaultLayout)
     Vue.component('MenuItem', MenuItem)
     head.link.push({

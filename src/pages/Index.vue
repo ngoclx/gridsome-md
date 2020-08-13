@@ -26,7 +26,10 @@ query WpPage {
 export default {
   name: "WpPage",
   created() {
-    console.log(this.$page.wpPage)
+    // console.log(this.$page.wpPage)
+  },
+  metaInfo: {
+    script: [{ src: "/bootstrap/dist/js/bootstrap.min.js", async: true, defer: true }],
   }
 };
 </script>
