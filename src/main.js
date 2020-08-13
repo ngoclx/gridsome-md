@@ -23,7 +23,7 @@ import '~/style.css'
 // import 'bootstrap/dist/js/bootstrap.min.js'
 import bootstrap from 'bootstrap'
 import jQuery from 'jquery'
-import Popper from 'popper'
+import Popper from 'popper.js'
 global.jQuery = jQuery;
 global.Popper = Popper;
 
