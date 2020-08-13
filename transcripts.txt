@@ -61,3 +61,5 @@ https://madewithvuejs.com/blog/the-best-vue-js-frameworks
 - Graphql
 https://topdev.vn/blog/graphql/
 
+
+!!! GET all acf fields from gutenberg blocks on a certain post: https://support.advancedcustomfields.com/forums/topic/acf-5-8-parse-gutenberg-blocks-and-get-acf-data-outside-of-post/
