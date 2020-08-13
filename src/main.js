@@ -18,9 +18,13 @@ import '~/style.css'
 // import 'bootstrap'
 // import '~/js/calendar.js'
 
-import '~/jquery/dist/jquery.slim.min.js'
-import '~/popper.js/dist/popper.min.js'
-import '~/bootstrap/dist/js/bootstrap.min.js'
+// import 'jquery/dist/jquery.slim.min.js'
+// import 'popper.js/dist/popper.min.js'
+// import 'bootstrap/dist/js/bootstrap.min.js'
+import 'jquery'
+import 'propper.js'
+import 'bootstrap'
+
 
 // import BootstrapVue from 'bootstrap-vue'
 
