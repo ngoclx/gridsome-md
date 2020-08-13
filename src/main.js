@@ -1,16 +1,16 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
-import $ from 'jquery'
-import jQuery from 'jquery'
+// import $ from 'jquery'
+// import jQuery from 'jquery'
 
-import 'bootstrap/dist/css/bootstrap.min.css'
+// import 'bootstrap/dist/css/bootstrap.min.css'
 import '~/css/maxmegamenu/style.css'
 import '~/style.css'
 
-// import 'bootstrap'
+import 'bootstrap'
 // import 'bootstrap/dist/js/bootstrap.min.js'
-import '~/js/calendar.js'
+// import '~/js/calendar.js'
 
 
 
