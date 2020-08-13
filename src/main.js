@@ -21,7 +21,6 @@ import '~/style.css'
 // import 'jquery/dist/jquery.slim.min.js'
 // import 'popper.js/dist/popper.min.js'
 // import 'bootstrap/dist/js/bootstrap.min.js'
-import bootstrap from 'bootstrap'
 // import jQuery from 'jquery'
 // import Popper from 'popper.js'
 // global.jQuery = jQuery;
