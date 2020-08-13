@@ -11,13 +11,16 @@ import '~/style.css'
 // { src: "https://code.jquery.com/jquery-3.2.1.slim.min.js", async: true, defer: true },
 // { src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", async: true, defer: true },
 // { src: "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", async: true, defer: true },
-import 'https://code.jquery.com/jquery-3.2.1.slim.min.js'
-import 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
-import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'
+// import 'https://code.jquery.com/jquery-3.2.1.slim.min.js'
+// import 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'
+// import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'
 
 // import 'bootstrap'
-// import 'bootstrap/dist/js/bootstrap.min.js'
 // import '~/js/calendar.js'
+
+import '~/jquery/dist/jquery.slim.min.js'
+import '~/popper.js/dist/popper.min.js'
+import '~/bootstrap/dist/js/bootstrap.min.js'
 
 // import BootstrapVue from 'bootstrap-vue'
 
