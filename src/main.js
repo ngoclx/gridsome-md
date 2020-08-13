@@ -5,9 +5,9 @@
 import '~/css/maxmegamenu/style.css'
 import '~/style.css'
 
-// import 'jquery/dist/jquery.min.js'
+import 'jquery/dist/jquery.min.js'
 // import 'bootstrap/dist/js/bootstrap.min.js'
-// import '~/js/calendar.js'
+import '~/js/calendar.js'
 
 
 
