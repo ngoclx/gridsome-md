@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div>
-      <h1 v-html="$page.wpPage.title" />
+      <h1 class="d-none" v-html="$page.wpPage.title" />
 
       <div v-html="$page.wpPage.content" />
     </div>
