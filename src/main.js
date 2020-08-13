@@ -1,9 +1,7 @@
 // This is the main.js file. Import global CSS and scripts here.
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 
-const { $, jQuery } = require('jquery');
-global.$ = $;
-global.jQuery = jQuery;
+import $ from 'jquery'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '~/css/maxmegamenu/style.css'
