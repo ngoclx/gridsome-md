@@ -9,7 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '~/css/maxmegamenu/style.css'
 import '~/style.css'
 
-import 'bootstrap'
+// import 'bootstrap'
 // import 'bootstrap/dist/js/bootstrap.min.js'
 import '~/js/calendar.js'
 
