@@ -1,9 +1,9 @@
 <template>
   <Layout>
     <div>
-      <h1 class="d-none" v-html="$page.wpInsights.title" />
+      <h1 class="d-none" v-html="$page.wpInsightTag.title" />
 
-      <div v-html="$page.wpInsights.content" />
+      <div v-html="$page.wpInsightTag.content" />
     </div>
 </Layout>
 </template>
@@ -28,7 +28,7 @@ export default {
     // InsightsRelated,
   },
   mounted() {
-    console.log(this.$page.WpInsightTag)
+    console.log(this.$page.wpInsightTag)
   }
 };
 </script>
