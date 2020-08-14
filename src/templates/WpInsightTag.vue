@@ -9,24 +9,12 @@
 </template>
 
 <page-query>
-query WpInsights ($path: String!) {
-  wpInsights (path: $path) {
+query wpInsightTag ($path: String!) {
+  wpInsightTag (path: $path) {
     id
     title
     slug
     path
-    excerpt
-    content
-    insightCategory {
-      title
-      slug
-    }
-    insightTag {
-      title
-      slug
-      path
-    }
-    date
   }
 }
 </page-query>
@@ -35,12 +23,12 @@ query WpInsights ($path: String!) {
 // import InsightsRelated from "~/components/InsightsRelated.vue";
 
 export default {
-  name: "WpInsights",
+  name: "WpInsightTag",
   components: {
     // InsightsRelated,
   },
   mounted() {
-    console.log(this.$page.wpInsights)
+    console.log(this.$page.WpInsightTag)
   }
 };
 </script>
