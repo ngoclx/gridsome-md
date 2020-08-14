@@ -12,6 +12,7 @@ query {
 }
 
 
+
 query {
   portfolio (path: "/porfolio/ridbc-2/") {
      id
