@@ -48,6 +48,9 @@
       </div>
 
       <div v-html="$page.wpInsights.content" />
+
+      <latest-insights-block :masterInsight="$page.wpInsights.id"/>
+
     </div>
   </Layout>
 </template>
@@ -62,10 +65,6 @@ query WpInsights ($path: String!) {
     excerpt
     content
     date
-    insightCategory {
-      title
-      slug
-    }
     insightTag {
       title
       slug
@@ -81,12 +80,12 @@ query WpInsights ($path: String!) {
 
 <script>
 import moment from 'moment';
-// import InsightsRelated from "~/components/InsightsRelated.vue";
+import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue";
 
 export default {
   name: "WpInsights",
   components: {
-    // InsightsRelated,
+    LatestInsightsBlock,
   },
   mounted() {
     console.log(this.$page.wpInsights);
