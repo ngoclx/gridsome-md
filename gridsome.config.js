@@ -54,7 +54,7 @@ module.exports = {
     {
       use: '@gridsome/source-wordpress',
       options: {
-        baseUrl: 'https://dev.marameodesign.com', // required
+        baseUrl: 'https://cw.marameodesign.com', // required
         apiBase: 'wp-json',
         typeName: 'Wp',
         perPage: 20,
