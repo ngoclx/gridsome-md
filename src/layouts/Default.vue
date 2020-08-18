@@ -1,6 +1,5 @@
 <template>
   <div class="layout">
-
     <header-block name="block-header" />
     <div class="breadcrumbs full-width">
       <div class="container">

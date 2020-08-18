@@ -1,12 +1,18 @@
 <template>
   <Layout>
     <div class="single-portfolio">
-      <portfolio-banner :banner="$page.wpPortfolio" />
-      <h1 class="d-none" v-html="$page.wpPortfolio.title" />
-      <div v-html="$page.wpPortfolio.content" />
+      <div id="page" class="hfeed site grid-container container grid-parent">
+        <div id="content" class="site-content">
+          <div class="container">
+            <portfolio-banner :banner="$page.wpPortfolio" />
+            <h1 class="d-none" v-html="$page.wpPortfolio.title" />
+            <div v-html="$page.wpPortfolio.content" />
 
-      <portfolio-related name="related-portfolios" :portfolios="$page.wpPortfolio.relatedPortfolios" />
+            <portfolio-related name="related-portfolios" :portfolios="$page.wpPortfolio.relatedPortfolios" />
+          </div>
+      </div>
     </div>
+  </div>
 </Layout>
 </template>
 
