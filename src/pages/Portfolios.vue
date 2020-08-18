@@ -2,17 +2,17 @@
   <Layout>
     <div>
       <case-studies-banner />
-
-      <ul class="row post-list">
-        <li
-          v-for="item in this.$page.portfolios.edges"
-          :key="item.id"
-          class="col-md-6 col-xl-4 post-card"
-        >
-          <post-teaser :node="item.node" />
-        </li>
-      </ul>
-
+      <div class="container">
+        <ul class="row post-list">
+          <li
+            v-for="item in this.$page.portfolios.edges"
+            :key="item.id"
+            class="col-md-6 col-xl-4 post-card portfolio"
+          >
+            <post-teaser :node="item.node" />
+          </li>
+        </ul>
+      </div>
       <!-- <pager
         :info="this.$page.portfolios.pageInfo"
         linkClass="page-link rounded"
