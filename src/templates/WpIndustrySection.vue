@@ -37,6 +37,11 @@ export default {
   name: "WpIndustrySection",
   components: {
     CategoryView
-  }
+  },
+  metaInfo() {
+    return {
+      title: this.$page.wpIndustrySection.title,
+    };
+  },
 };
 </script>

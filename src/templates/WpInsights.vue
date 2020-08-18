@@ -94,6 +94,11 @@ export default {
     dmy: function (value) {
       return moment(value).format('DD MMMM YYYY');
     }
-  }
+  },
+  metaInfo() {
+    return {
+      title: this.$page.wpInsights.title,
+    };
+  },
 };
 </script>

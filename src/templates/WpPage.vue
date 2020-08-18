@@ -28,6 +28,11 @@ export default {
   name: "WpPage",
   created() {
     // console.log(this.$page.wpPage)
+  },
+  metaInfo() {
+    return {
+      title: this.$page.wpPage.title
+    }
   }
 };
 </script>

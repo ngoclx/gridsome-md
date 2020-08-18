@@ -408,5 +408,10 @@ export default {
       window.location.href = '/'
     }
   },
+  metaInfo() {
+    return {
+      title: 'Get in touch'
+    }
+  }
 }
 </script>

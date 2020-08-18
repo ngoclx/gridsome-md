@@ -61,10 +61,5 @@ export default {
     HeaderBlock,
     FooterBlock,
   },
-  metaInfo() {
-    return {
-      title: this.$page.wpPage.title
-    }
-  }
 }
 </script>

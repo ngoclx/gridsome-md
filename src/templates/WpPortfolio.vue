@@ -62,6 +62,11 @@ export default {
   },
   mounted() {
     console.log(this.$page.wpPortfolio)
-  }
+  },
+  metaInfo() {
+    return {
+      title: this.$page.wpPortfolio.title,
+    };
+  },
 };
 </script>

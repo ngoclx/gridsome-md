@@ -39,6 +39,11 @@ export default {
   },
   mounted() {
     console.log(this.$page.wpInsightTag)
-  }
+  },
+  metaInfo() {
+    return {
+      title: this.$page.wpInsightTag.title,
+    };
+  },
 };
 </script>

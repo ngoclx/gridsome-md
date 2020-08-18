@@ -37,6 +37,11 @@ export default {
   name: "WpServiceProvide",
   components: {
     CategoryView
-  }
+  },
+  metaInfo() {
+    return {
+      title: this.$page.wpServiceProvide.title,
+    };
+  },
 };
 </script>
