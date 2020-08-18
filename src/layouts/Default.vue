@@ -3,11 +3,64 @@
 
     <header-block name="block-header" />
 
+    <b-breadcrumb :items="breadcrumbItems()" v-if="breadcrumbItems().length"></b-breadcrumb>
+
     <slot/>
 
     <footer-block name="block-footer" />
   </div>
 </template>
+
+<script>
+import HeaderBlock from "~/components/HeaderBlock.vue";
+import FooterBlock from "~/components/FooterBlock.vue";
+
+export default {
+  name: "Layout",
+  components: {
+    HeaderBlock,
+    FooterBlock,
+  },
+  methods: {
+    breadcrumbItems() {
+      var path = window.location.pathname
+      var elems = path.split("/")
+      var filtered = _.reject(elems, _.isEmpty)
+
+      // No breadcrumb on homepage
+      if (filtered.length == 0) {
+        return []
+      }
+
+      // Else
+      var items = []
+      var first = true
+
+      while (filtered.length > 0)
+      {
+        var currentPath = "/" + filtered.join("/")
+        var last = filtered.pop()
+
+        var pageTitle = _.replace(last, '-', ' ')
+        pageTitle = _.startCase(pageTitle)
+
+        if (first) {      
+          first = false
+          items.unshift({ text: pageTitle, active: true })
+        }
+        else {
+          items.unshift({ text: pageTitle, href: currentPath })
+        }
+      }
+
+      items.unshift({ text: 'Home', href: '/' })
+
+      return items
+    }
+  }
+}
+</script>
+
 <style>
   @font-face {
     font-family: 'GTWalsheimPro Bold';
@@ -51,15 +104,3 @@
     font-weight: 300;
 }
 </style>
-<script>
-import HeaderBlock from "~/components/HeaderBlock.vue";
-import FooterBlock from "~/components/FooterBlock.vue";
-
-export default {
-  name: "Layout",
-  components: {
-    HeaderBlock,
-    FooterBlock,
-  },
-}
-</script>

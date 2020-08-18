@@ -30,6 +30,7 @@ import BootstrapVue from 'bootstrap-vue'
 import VueFormulate from '@braid/vue-formulate'
 import DefaultLayout from '~/layouts/Default.vue'
 import MenuItem from '~/components/MenuItem.vue'
+import _ from 'lodash'
 
 export default function(Vue, { router, head, isClient }) {
     // Set default layout as a global component

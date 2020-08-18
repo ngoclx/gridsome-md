@@ -1,5 +1,6 @@
 <template>
   <Layout>
+
     <div id="page" class="hfeed site grid-container container grid-parent">
         <div id="content" class="site-content">
           <h1 class="d-none" v-html="$page.wpPage.title" />
@@ -28,9 +29,6 @@ query WpPage ($path: String!) {
 
 export default {
   name: "WpPage",
-  created() {
-    // console.log(this.$page.wpPage)
-  },
   metaInfo() {
     return {
       title: this.$page.wpPage.title
