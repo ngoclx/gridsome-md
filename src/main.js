@@ -5,8 +5,8 @@
 // import jQuery from 'jquery'
 
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import '~/css/maxmegamenu/style.css'
-import '~/style.css'
+//import '~/css/maxmegamenu/style.css'
+//import '~/style.css'
 
 // { src: "https://code.jquery.com/jquery-3.2.1.slim.min.js", async: true, defer: true },
 // { src: "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", async: true, defer: true },
@@ -38,6 +38,7 @@ export default function(Vue, { router, head, isClient }) {
 
     Vue.component('Layout', DefaultLayout)
     Vue.component('MenuItem', MenuItem)
+
     head.link.push({
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Nunito:300,400,600,600i,700,700i,800,900&display=swap'
@@ -46,4 +47,10 @@ export default function(Vue, { router, head, isClient }) {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.9.0/css/all.css',
     });
+    head.link.push({
+        rel: 'stylesheet',
+        href: 'https://cw.marameodesign.com/wp-content/themes/generatepress_child/style.css',
+    });
 }
+
+import '~/css/maxmegamenu/style.css'
