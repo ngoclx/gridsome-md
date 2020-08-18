@@ -2,15 +2,24 @@
   <div class="layout">
 
     <header-block name="block-header" />
-
-    <b-breadcrumb :items="breadcrumbItems()" v-if="breadcrumbItems().length"></b-breadcrumb>
-
+    <div class="breadcrumbs full-width">
+      <div class="container">
+        <nav aria-label="breadcrumb">
+          <b-breadcrumb :items="breadcrumbItems()" v-if="breadcrumbItems().length"></b-breadcrumb>
+        </nav>
+      </div>
+    </div>
     <slot/>
 
     <footer-block name="block-footer" />
   </div>
 </template>
-
+<style>
+.breadcrumbs nav .breadcrumb .breadcrumb-item.active:after{
+  display: none;
+}
+  
+</style>
 <script>
 import HeaderBlock from "~/components/HeaderBlock.vue";
 import FooterBlock from "~/components/FooterBlock.vue";
