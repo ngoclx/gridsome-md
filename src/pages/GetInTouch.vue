@@ -35,7 +35,7 @@
                     <div class="with_frm_style">
                       <FormulateForm @submit="submitHandler">
                         <div class="row">
-                          <div class="col-6 form-group">
+                          <div class="col-md-6 col-12 form-group">
                             <FormulateInput
                               label="Name"
                               name="fullname"
@@ -43,7 +43,7 @@
                               error-behavior="submit"
                             />
                           </div>
-                          <div class="col-6 form-group">
+                          <div class="col-md-6 col-12 form-group">
                             <FormulateInput
                               type="email"
                               name="email"
@@ -51,14 +51,14 @@
                               validation="email"
                             />
                           </div>
-                          <div class="col-6 form-group">
+                          <div class="col-md-6 col-12 form-group">
                             <FormulateInput
                               name="phone"
                               label="Phone"
                               validation="required"
                             />
                           </div>
-                          <div class="col-6 form-group">
+                          <div class="col-md-6 col-12 form-group">
                             <FormulateInput
                               name="organization"
                               label="Organization"
@@ -291,7 +291,7 @@
   .enquiry .with_frm_style input[type=email], .enquiry .with_frm_style input[type=tel], .enquiry .with_frm_style input[type=text], .enquiry .with_frm_style textarea{
     width: 100%;
   }
-  .enquiry .with_frm_style textarea{
+  body .enquiry .with_frm_style textarea{
     height: 15.4rem;
   }
   .enquiry .with_frm_style .frm_submit button {
@@ -307,6 +307,7 @@
   .enquiry  .form-group-radio .formulate-input .formulate-input-group{
     display: flex;
     display: -webkit-flex;
+    flex-wrap: wrap;
   }
   .enquiry  .form-group-radio .formulate-input .formulate-input-group .formulate-input-group-item{
     margin-right: 1rem;
