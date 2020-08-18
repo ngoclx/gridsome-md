@@ -15,6 +15,7 @@ module.exports = {
         WpServiceProvide: '/service-provided/:slug',
 
         WpInsights: '/insights/:slug',
+        WpInsightTag: '/insight_tag/:slug',
 
         // Define multiple alias for the same entity (page)
         WpPage: [{

@@ -1,9 +1,10 @@
 <template>
   <section class="archive-cont full-width feat-news post-card portfolio">
     <div class="container">
-      
-      <h2 class="title-section text-center">Related <span>case studies</span></h2>
-      
+      <h2 class="title-section text-center">
+        Related <span>case studies</span>
+      </h2>
+
       <ul class="row post-list">
         <li
           v-for="item in portfolios"
@@ -12,7 +13,7 @@
         >
           <portfolio-teaser :node="item" />
         </li>
-    </ul>
+      </ul>
     </div>
   </section>
 </template>
@@ -26,11 +27,10 @@ export default {
     PortfolioTeaser,
   },
   props: {
-
     portfolios: {
       type: Array,
       required: true,
-    }
-  }
+    },
+  },
 };
 </script>

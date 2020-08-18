@@ -191,8 +191,8 @@ export default {
     }
   },
   mounted() {
-    console.log(this.$static.migMenu)
-    console.log(this.$static.latestInsights)
+    // console.log(this.$static.migMenu)
+    // console.log(this.$static.latestInsights)
   },
 };
 </script>

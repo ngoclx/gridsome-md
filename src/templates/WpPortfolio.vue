@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <div>
-      <h1 v-html="$page.wpPortfolio.title" />
+      <h1 class="d-none" v-html="$page.wpPortfolio.title" />
 
       <div v-html="$page.wpPortfolio.content" />
 

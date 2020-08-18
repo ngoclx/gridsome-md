@@ -1,5 +1,6 @@
 <template>
   <div class="book-project margin-negative">
+    <span id="calendar-lib" />
     <div class="container">
         <div class="in-book-project">
             <div class="row">

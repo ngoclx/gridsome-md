@@ -7,14 +7,14 @@
     >
       <div class="container insideHeader">
         <div class="site-logo">
-          <h1>
+          <g-link to="/">
             <g-image
               class="header-image"
               :alt="$static.metadata.siteNam"
               src="~/images/marameo-logo.svg"
               :title="$static.metadata.siteNam"
             />
-          </h1>
+          </g-link>
         </div>
 
         <navbar name="navigation-bar" /> 

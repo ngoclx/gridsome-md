@@ -1,3 +1,4 @@
+
 https://www.npmjs.com/package/@gridsome/source-wordpress
 
 Deployment via netify: https://youtu.be/vy39yigro_8?t=1948
@@ -18,3 +19,51 @@ https://www.apollographql.com/docs/apollo-server/schema/schema/
 https://github.com/pehaa/gridsome-starter-wordpress-bootstrap
 
 https://github.com/LokeCarlsson/gridsome-starter-bootstrap
+
+
+- Vue WP example: 
+https://snipcart.com/blog/wordpress-vue-headless
+
+- FOR SEO
+https://snipcart.com/blog/vue-js-seo-prerender-example
+
+- Vue life cycle
+https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
+
+- 404
+https://reactgo.com/vue-router-404-page/
+
+- Courses
+https://www.udemy.com/course/vuejs-2-the-complete-guide/
+https://laracasts.com/series/learn-vue-2-step-by-step/
+Promise: https://ehkoo.com/bai-viet/tat-tan-tat-ve-promise-va-async-await
+
+- Themes
+https://github.com/leerw4/wordpress-vue-theme
+https://github.com/vuew-wp/vuew-theme <= login/out
+
+- ACF Fields to api: https://snipcart.com/blog/wordpress-vue-headless
+- Add ACF Fields to /wp/v2/posts via hook: https://atendesigngroup.com/articles/customizing-rest-api-response-wordpress
+
+- Multi-step form: https://codepen.io/charliepage/pen/QMqqRr?__cf_chl_jschl_tk__=2fb6bd8a3679df4f12c9449d07250e6ac08d2479-1596429916-0-AWjLr9WClC7RFCMlObHsE7im_3woV1SIjPyP4OD1v27GGIb_aZalQAm6msE5X_mXCKmnjyyU5N9T_WWzu5bU97FNRvAv4cdAO4iN7dvQ_zLDv2ET2qhrdRIxBwFq7rMBDxRIg4Tcp61QqD60uXdgUZHuDt9eQCL8DZuv9ErbRsveMpWRKTK57DjrPub7HRrXjN7T4EhKMVu3wS-T9NLREyS4_AuGa6xEmLKdgcPwJzR3TNgm89-J7YoSKUBbdpRVkp8Ip2NqOGP2fbuFkeY9uX9KxK5UIkzErIogelD8wOvtqAqYrVjbf4oxddxsf1QJi_w5atAWbvqaEUBoOLVKlyQlmt9jwmbybuGpwZxj9FFE
+- Captcha for form: https://itnext.io/how-to-use-google-recaptcha-with-vuejs-7756244400da
+
+
+- Customize wp rest api
+https://atendesigngroup.com/articles/customizing-rest-api-response-wordpress
+
+- SEO by google: 
+https://www.smashingmagazine.com/2019/05/vue-js-seo-reactive-websites-search-engines-bots/
+https://web.dev/javascript-and-google-search-io-2019/
+https://www.hobo-web.co.uk/javascript-seo/
+
+- Vuejs frameworks
+https://madewithvuejs.com/blog/the-best-vue-js-frameworks
+- Graphql
+https://topdev.vn/blog/graphql/
+
+
+!!! GET all acf fields from gutenberg blocks on a certain post: https://support.advancedcustomfields.com/forums/topic/acf-5-8-parse-gutenberg-blocks-and-get-acf-data-outside-of-post/
+
+
+https://vuejsdevelopers.com/2017/04/22/vue-js-libraries-plugins/
