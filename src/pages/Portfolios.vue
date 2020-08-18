@@ -1,18 +1,17 @@
 <template>
   <Layout>
-    <div>
-      <case-studies-banner />
-      <div class="container">
-        <ul class="row post-list">
-          <li
-            v-for="item in this.$page.portfolios.edges"
-            :key="item.id"
-            class="col-md-6 col-xl-4 post-card portfolio"
-          >
-            <post-teaser :node="item.node" />
-          </li>
-        </ul>
-      </div>
+    <div id="page" class="hfeed site grid-container container grid-parent">
+      <div id="content" class="site-content">
+        <case-studies-banner />
+          <ul class="row post-list">
+            <li
+              v-for="item in this.$page.portfolios.edges"
+              :key="item.id"
+              class="col-md-6 col-xl-4 post-card portfolio"
+            >
+              <post-teaser :node="item.node" />
+            </li>
+          </ul>
       <!-- <pager
         :info="this.$page.portfolios.pageInfo"
         linkClass="page-link rounded"
@@ -20,7 +19,7 @@
       /> -->
 
       <latest-insights-block />
-
+      </div>
     </div>
   </Layout>
 </template>
