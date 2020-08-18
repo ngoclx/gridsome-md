@@ -65,6 +65,7 @@
                       </div>
                       <div class="col-12">
                         <FormulateInput
+                          name="price"
                           type="radio"
                           label="Approximate Budget"
                           validation="required"
