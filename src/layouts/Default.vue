@@ -32,6 +32,11 @@ export default {
   },
   methods: {
     breadcrumbItems() {
+      // For server
+      if (typeof window == 'undefined') {
+        return [];
+      }
+
       var path = window.location.pathname
       var elems = path.split("/")
       var filtered = _.reject(elems, _.isEmpty)
