@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <portfolio-category name="service-provide" :categoryTitle="'Service Provided: ' + $page.wpServiceProvide.title" :portfolios="$page.wpServiceProvide.belongsTo.edges" />
+    <category-view name="service-provide" :categoryTitle="'Service Provided: ' + $page.wpServiceProvide.title" :items="$page.wpServiceProvide.belongsTo.edges" />
   </Layout>
 </template>
 
@@ -31,12 +31,12 @@ query ($path: String!) {
 </page-query>
 
 <script>
-import PortfolioCategory from "~/components/PortfolioCategory.vue";
+import CategoryView from "~/components/CategoryView.vue";
 
 export default {
   name: "WpServiceProvide",
   components: {
-    PortfolioCategory
+    CategoryView
   }
 };
 </script>

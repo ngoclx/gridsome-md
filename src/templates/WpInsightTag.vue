@@ -1,31 +1,41 @@
 <template>
   <Layout>
-    <div>
-      <h1 class="d-none" v-html="$page.wpInsightTag.title" />
-
-      <div v-html="$page.wpInsightTag.content" />
-    </div>
-</Layout>
+    <category-view name="insight-tag-section" :categoryTitle="'Insights Tag: ' + $page.wpInsightTag.title" :items="$page.wpInsightTag.belongsTo.edges" />
+  </Layout>
 </template>
 
 <page-query>
 query wpInsightTag ($path: String!) {
   wpInsightTag (path: $path) {
-    id
     title
-    slug
-    path
+    belongsTo {
+      edges {
+        node {
+          ... on WpInsights {
+            id
+            title
+            path
+            featuredMedia { 
+              id
+              sourceUrl
+              title
+              altText
+            }
+          }
+        }
+      }
+    }
   }
 }
 </page-query>
 
 <script>
-// import InsightsRelated from "~/components/InsightsRelated.vue";
+import CategoryView from "~/components/CategoryView.vue";
 
 export default {
   name: "WpInsightTag",
   components: {
-    // InsightsRelated,
+    CategoryView,
   },
   mounted() {
     console.log(this.$page.wpInsightTag)

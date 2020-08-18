@@ -19,7 +19,7 @@
           <g-image :src="node.featuredMedia.sourceUrl" width="190" height="300" class="attachment-medium size-medium wp-post-image" />
         </div>
       </div>
-      <div class="entry-summary" itemprop="text" v-html="node.excerpt" />
+      <div class="entry-summary" itemprop="text" v-html="node.excerpt" v-if="node.excerpt" />
       <p>
         <g-link
           :to="node.path"
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: "PortfolioTeaser",
+  name: "PostTeaser",
   props: {
     node: {
       type: Object,

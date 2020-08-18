@@ -5,30 +5,30 @@
     </header>
     <ul class="row post-list">
       <li
-        v-for="item in portfolios"
+        v-for="item in items"
         :key="item.id"
         class="col-md-6 col-xl-4 post-card"
       >
-        <portfolio-teaser :node="item.node" />
+        <post-teaser :node="item.node" />
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import PortfolioTeaser from "~/components/PortfolioTeaser.vue";
+import PostTeaser from "~/components/PostTeaser.vue";
 
 export default {
-  name: "PortfolioCategory",
+  name: "CategoryView",
   components: {
-    PortfolioTeaser,
+    PostTeaser,
   },
   props: {
     categoryTitle: {
       type: String,
       required: true,
     },
-    portfolios: {
+    items: {
       type: Array,
       required: true,
     }
