@@ -25,7 +25,6 @@
                 <div class="form enquiry" id="enquiry-form">
                   <div class="frm_forms">
                     <div class="row">
-                      
                       <div class="col-auto">
                         <p class="sub-title">
                           LET’S GET STARTED
@@ -378,11 +377,27 @@ export default {
     LatestInsightsBlock,
   },
   methods: {
-    submitHandler(data) {
-      axios.post('https://cw.marameodesign.com/wp-json/contact-form-7/v1/contact-forms/1312/feedback', data, {
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
+    submitHandler(rawData) {
+      var FormData = require('form-data')
+      var data = new FormData()
+      data.append('fullname', rawData.fullname)
+      data.append('email', rawData.email)
+      data.append('phone', rawData.phone)
+      data.append('services', rawData.services)
+      data.append('price', rawData.price)
+
+      var config = {
+        method: 'post',
+        url: 'https://cw.marameodesign.com/wp-json/contact-form-7/v1/contact-forms/1312/feedback',
+        data : data
+      }
+
+      axios(config)
+      .then(function (response) {
+        console.log(JSON.stringify(response.data))
+      })
+      .catch(function (error) {
+        console.log(error)
       })
 
       this.$bvModal.show('highfive')
@@ -393,5 +408,5 @@ export default {
       window.location.href = '/'
     }
   },
-};
+}
 </script>
