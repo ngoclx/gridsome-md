@@ -97,8 +97,14 @@ export default {
         border: 1px solid #ccc!important;
         border-top: 4px solid #0caade!important;
     }
-    #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link{
+    #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.mega-menu-item-has-children > a.mega-menu-link{
       padding-bottom: 3rem !important;
+    }
+    #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu.mega-menu-item{
+      vertical-align: baseline !important;
+    }
+    #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item.get-in-touch > a.mega-menu-link{
+      padding-bottom: 0 !important;
     }
     #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu.mega-menu-item.mega-menu-item-has-children >ul.mega-sub-menu{
       top: 40px;
@@ -108,7 +114,7 @@ export default {
       transition: all 0.3s ease-in-out;
     }
     .main-navigation #mega-menu-primary>li.mega-menu-item.mega-menu-item-has-children>a.mega-menu-link:before{
-      transition: opacity .3s ease-in,visibility .3s ease-in;
+      transition: none !important;
     }
   }
 </style>
