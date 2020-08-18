@@ -45,6 +45,11 @@ query allWpPortfolio {
           altText
           title
         }
+        industrySectionTerms{
+          termId
+          name
+          slug
+        }
       }
     }
   }

@@ -17,9 +17,16 @@
       <div class="post-image" >
         <div class="in-post-image" >
           <g-image :src="node.featuredMedia.sourceUrl" width="190" height="300" class="attachment-medium size-medium wp-post-image" />
+
+          <!-- For portfolio specifically -->
+          <p class="cate-name pink" style="user-select: auto;" v-for="term in node.industrySectionTerms" :key="term.key" v-html="term.name" />
+
         </div>
       </div>
       <div class="entry-summary" itemprop="text" v-html="node.excerpt" v-if="node.excerpt" />
+
+
+      
       <p>
         <g-link
           :to="node.path"
