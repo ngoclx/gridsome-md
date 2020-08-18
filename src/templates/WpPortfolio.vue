@@ -1,8 +1,8 @@
 <template>
   <Layout>
-    <div>
+    <div class="single-portfolio">
+      <portfolio-banner :banner="$page.wpPortfolio" />
       <h1 class="d-none" v-html="$page.wpPortfolio.title" />
-
       <div v-html="$page.wpPortfolio.content" />
 
       <portfolio-related name="related-portfolios" :portfolios="$page.wpPortfolio.relatedPortfolios" />
@@ -19,6 +19,20 @@ query WpPortfolio ($path: String!) {
     path
     excerpt
     content
+    featuredMedia{
+      sourceUrl
+      altText
+    }
+    industrySectionTerms{
+      termId
+      name
+      slug
+    }
+    serviceProvideTerms{
+      termId
+      name
+      slug
+    }
     relatedPortfolios { 
       id
       slug
@@ -38,11 +52,13 @@ query WpPortfolio ($path: String!) {
 
 <script>
 import PortfolioRelated from "~/components/PortfolioRelated.vue";
+import PortfolioBanner from "~/components/PortfolioBanner.vue";
 
 export default {
   name: "WpPortfolio",
   components: {
     PortfolioRelated,
+    PortfolioBanner,
   },
   mounted() {
     console.log(this.$page.wpPortfolio)
