@@ -37,7 +37,7 @@
                       <div class="col-6">
                         <FormulateInput
                           label="Name"
-                          name="name"
+                          name="fullname"
                           validation="required"
                           error-behavior="submit"
                         />
@@ -54,7 +54,7 @@
                         <FormulateInput
                           name="phone"
                           label="Phone"
-                          validation="required|number"
+                          validation="required"
                         />
                       </div>
                       <div class="col-6">
@@ -82,6 +82,7 @@
                         <FormulateInput
                           type="textarea"
                           validation="required"
+                          name="services"
                           label="Which services are you interested in?"
                         />
                       </div>
@@ -97,6 +98,7 @@
           </div>
         </div>
         <!-- .entry-header -->
+        
         <div class="contact">
           <div class="row">
             <div class="col-xl-4">
@@ -112,8 +114,7 @@
                 <h3>Sydney Office</h3>
                 <p>
                   <g-link to="mailto:hello@marameodesign.com"
-                    >hello@marameodesign.com</g-link
-                  >
+                    >hello@marameodesign.com</g-link>
                   <br />
                   <g-link
                     to="tel:+61280050069"
@@ -138,6 +139,7 @@
             </div>
           </div>
         </div>
+
         <div class="find-us">
           <div class="top-section">
             <h2 class="title-section">Our offices</h2>
@@ -225,15 +227,30 @@
             </ul>
           </div>
         </div>
+
       </div>
     </div>
 
     <latest-insights-block />
+
+    <b-modal id="highfive" hide-footer hide-header>
+      <h3>High Five</h3>
+      <p class="my-4">We’ll contact you soon to discuss your requirements.</p>
+      <p class="my-4">In the meantime, if you are up for a chat, feel free to call Mara on <g-link
+                    to="tel:+61415314198"
+                    data-wpel-link="internal"
+                    rel="noopener noreferrer"
+                    >+61 415 314 198</g-link
+                  ></p>
+      <b-button class="mt-3" block @click="gotoHome()">Close</b-button>
+    </b-modal>
+
   </Layout>
 </template>
 
 <script>
-import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue";
+import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue"
+import axios from 'axios'
 
 export default {
   components: {
@@ -241,8 +258,19 @@ export default {
   },
   methods: {
     submitHandler(data) {
-      
+      axios.post('https://cw.marameodesign.com/wp-json/contact-form-7/v1/contact-forms/1312/feedback', data, {
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
+
+      this.$bvModal.show('highfive')
     },
+
+    gotoHome() {
+      this.$bvModal.hide('highfive')
+      window.location.href = '/'
+    }
   },
 };
 </script>
