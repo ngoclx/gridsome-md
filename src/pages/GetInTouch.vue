@@ -236,7 +236,7 @@
 
     <latest-insights-block />
 
-    <b-modal id="highfive" centered hide-footer hide-header>
+    <b-modal id="highfive" centered hide-footer hide-header no-close-on-backdrop no-close-on-esc>
       <h2>High Five</h2>
       <p>We’ll contact you soon to discuss your requirements.</p>
       <p>In the meantime, if you are up for a chat, feel free to call Mara on <g-link
