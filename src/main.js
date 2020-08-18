@@ -43,5 +43,9 @@ export default function(Vue, { router, head, isClient }) {
     head.link.push({
         rel: 'stylesheet',
         href: 'https://fonts.googleapis.com/css?family=Nunito:300,400,600,600i,700,700i,800,900&display=swap'
-    })
+    });
+    head.link.push({
+        rel: 'stylesheet',
+        href: 'https://use.fontawesome.com/releases/v5.9.0/css/all.css',
+    });
 }
