@@ -26,6 +26,9 @@
 // global.jQuery = jQuery;
 // global.Popper = Popper;
 
+import jQuery from 'jquery'
+window.jQuery = window.$ = jQuery
+
 import BootstrapVue from 'bootstrap-vue'
 import VueFormulate from '@braid/vue-formulate'
 import DefaultLayout from '~/layouts/Default.vue'
