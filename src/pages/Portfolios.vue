@@ -9,7 +9,7 @@
           :key="item.id"
           class="col-md-6 col-xl-4 post-card"
         >
-          <portfolio-teaser :node="item.node" />
+          <post-teaser :node="item.node" />
         </li>
       </ul>
 
@@ -52,16 +52,16 @@ query allWpPortfolio($page: Int) {
 </page-query>
 
 <script>
-import CaseStudiesBanner from "~/components/CaseStudiesBanner.vue";
-import PortfolioTeaser from "~/components/PortfolioTeaser.vue";
-import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue";
-import { Pager } from "gridsome";
+import CaseStudiesBanner from "~/components/CaseStudiesBanner.vue"
+import PostTeaser from "~/components/PostTeaser.vue"
+import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue"
+import { Pager } from "gridsome"
 
 export default {
   components: {
     LatestInsightsBlock,
     CaseStudiesBanner,
-    PortfolioTeaser,
+    PostTeaser,
     Pager,
   },
   metaInfo() {

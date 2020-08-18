@@ -11,7 +11,7 @@
           :key="item.id"
           class="col-md-6 col-xl-4 post-card"
         >
-          <portfolio-teaser :node="item" />
+          <post-teaser :node="item" />
         </li>
       </ul>
     </div>
@@ -19,12 +19,12 @@
 </template>
 
 <script>
-import PortfolioTeaser from "~/components/PortfolioTeaser.vue";
+import PostTeaser from "~/components/PostTeaser.vue";
 
 export default {
   name: "PortfolioRelated",
   components: {
-    PortfolioTeaser,
+    PostTeaser,
   },
   props: {
     portfolios: {

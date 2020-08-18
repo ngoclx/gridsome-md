@@ -29,14 +29,15 @@ import '~/style.css'
 // import BootstrapVue from 'bootstrap-vue'
 
 
-
-
+import VueFormulate from '@braid/vue-formulate'
 import DefaultLayout from '~/layouts/Default.vue'
 import MenuItem from '~/components/MenuItem.vue'
 
 export default function(Vue, { router, head, isClient }) {
     // Set default layout as a global component
     // Vue.use(BootstrapVue)
+    Vue.use(VueFormulate)
+
     Vue.component('Layout', DefaultLayout)
     Vue.component('MenuItem', MenuItem)
     head.link.push({

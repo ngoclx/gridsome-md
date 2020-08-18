@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <portfolio-category name="industry-section" :categoryTitle="'Industry Section: ' + $page.wpIndustrySection.title" :portfolios="$page.wpIndustrySection.belongsTo.edges" />
+    <category-view name="industry-section" :categoryTitle="'Industry Section: ' + $page.wpIndustrySection.title" :items="$page.wpIndustrySection.belongsTo.edges" />
   </Layout>
 </template>
 
@@ -31,12 +31,12 @@ query ($path: String!) {
 </page-query>
 
 <script>
-import PortfolioCategory from "~/components/PortfolioCategory.vue";
+import CategoryView from "~/components/CategoryView.vue";
 
 export default {
   name: "WpIndustrySection",
   components: {
-    PortfolioCategory
+    CategoryView
   }
 };
 </script>
