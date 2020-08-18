@@ -60,6 +60,11 @@ export default {
   components: {
     HeaderBlock,
     FooterBlock,
+  },
+  metaInfo() {
+    return {
+      title: this.$page.wpPage.title
+    }
   }
 }
 </script>

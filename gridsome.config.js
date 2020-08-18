@@ -47,6 +47,11 @@ module.exports = {
                 component: './src/templates/WpPage.vue'
             },
 
+            {
+                name: 'web-development',
+                path: '/services/web-development/:slug',
+                component: './src/templates/WpPage.vue'
+            },
         ]
     },
     plugins: [{
