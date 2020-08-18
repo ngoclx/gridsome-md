@@ -13,11 +13,11 @@
         </li>
       </ul>
 
-      <pager
+      <!-- <pager
         :info="this.$page.portfolios.pageInfo"
         linkClass="page-link rounded"
         class="pagination justify-content-center"
-      />
+      /> -->
 
       <latest-insights-block />
 
@@ -27,8 +27,8 @@
 
 <page-query>
 
-query allWpPortfolio($page: Int) {
-  portfolios: allWpPortfolio(perPage: 6, page: $page) @paginate {
+query allWpPortfolio {
+  portfolios: allWpPortfolio {
     pageInfo {
       totalPages
       currentPage
@@ -55,14 +55,14 @@ query allWpPortfolio($page: Int) {
 import CaseStudiesBanner from "~/components/CaseStudiesBanner.vue"
 import PostTeaser from "~/components/PostTeaser.vue"
 import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue"
-import { Pager } from "gridsome"
+// import { Pager } from "gridsome"
 
 export default {
   components: {
     LatestInsightsBlock,
     CaseStudiesBanner,
     PostTeaser,
-    Pager,
+    // Pager,
   },
   metaInfo() {
     return {
@@ -70,7 +70,7 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$page.portfolios);
+    // console.log(this.$page.portfolios);
   },
 };
 </script>
