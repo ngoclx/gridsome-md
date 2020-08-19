@@ -7,7 +7,7 @@
 
       <ul class="row post-list">
         <li
-          v-for="item in portfolios"
+          v-for="item in related3"
           :key="item.id"
           class="col-md-6 col-xl-4 post-card"
         >
@@ -17,6 +17,36 @@
     </div>
   </section>
 </template>
+
+<static-query>
+query {
+relatedPortfolio: allWpPortfolio (limit: 3) {
+  edges
+    {
+      node
+      {
+        id
+        title
+        path
+        featuredMedia {
+          id
+          sourceUrl
+          altText
+          title
+        }
+        serviceProvide{
+          id
+          title
+          slug
+        }
+        industrySectionTerms {
+          name
+        }
+      }
+    }
+  }
+}
+</static-query>
 
 <script>
 import PostTeaser from "~/components/PostTeaser.vue";
@@ -29,7 +59,22 @@ export default {
   props: {
     portfolios: {
       type: Array,
-      required: true,
+      required: false,
+    },
+  },
+  computed: {
+    related3() {
+      if (typeof this.portfolios == 'undefined') {
+        var related3 = [];
+        this.$static.relatedPortfolio.edges.forEach(function(item) {
+          related3.push(item.node)
+        })
+
+        return related3
+      }
+      else {
+        return this.portfolios
+      }
     },
   },
 };
