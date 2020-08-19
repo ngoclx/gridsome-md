@@ -2,23 +2,22 @@
   <Layout>
     <div id="page" class="hfeed site grid-container container grid-parent">
       <div id="content" class="site-content">
-        <case-studies-banner />
+        <all-insight-banner />
           <ul class="row post-list">
             <li
-              v-for="item in this.$page.portfolios.edges"
+              v-for="item in this.$page.insights.edges"
               :key="item.id"
-              class="col-md-6 col-xl-4 post-card portfolio"
+              class="col-md-6 col-xl-4 post-card"
             >
-              <post-teaser :node="item.node" :posttype="portfolios" />
+              <post-teaser :node="item.node" :posttype="insights" />
             </li>
           </ul>
-      <!-- <pager
-        :info="this.$page.portfolios.pageInfo"
+     <!-- <pager
+        :info="this.$page.insights.pageInfo"
         linkClass="page-link rounded"
         class="pagination justify-content-center"
       /> -->
-
-      <latest-insights-block />
+      
       </div>
     </div>
   </Layout>
@@ -26,8 +25,8 @@
 
 <page-query>
 
-query allWpPortfolio {
-  portfolios: allWpPortfolio {
+query allWpInsights {
+  insights: allWpInsights {
     pageInfo {
       totalPages
       currentPage
@@ -44,9 +43,9 @@ query allWpPortfolio {
           altText
           title
         }
-        industrySectionTerms{
-          termId
-          name
+        insightCategory{
+          id
+          title
           slug
         }
       }
@@ -56,30 +55,30 @@ query allWpPortfolio {
 </page-query>
 
 <script>
-import CaseStudiesBanner from "~/components/CaseStudiesBanner.vue"
+import AllInsightBanner from "~/components/AllInsightBanner.vue"
 import PostTeaser from "~/components/PostTeaser.vue"
-import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue"
-// import { Pager } from "gridsome"
+//import PortfolioRelated from "~/components/PortfolioRelated.vue";
+//import { Pager } from "gridsome"
 
 export default {
   components: {
-    LatestInsightsBlock,
-    CaseStudiesBanner,
+    AllInsightBanner,
     PostTeaser,
-    // Pager,
+    //PortfolioRelated
+    //Pager,
   },
   data() {
     return{
-        portfolios: 'portfolios'
+        insights: 'insights'
     }
   },
   metaInfo() {
     return {
-      title: "Case studies",
+      title: "Insights",
     };
   },
   mounted() {
-    // console.log(this.$page.portfolios);
+    // console.log(this.$page.insights);
   },
 };
 </script>

@@ -19,8 +19,12 @@
           <g-image :src="node.featuredMedia.sourceUrl" width="190" height="300" class="attachment-medium size-medium wp-post-image" />
 
           <!-- For portfolio specifically -->
-          <p class="cate-name pink" style="user-select: auto;" v-for="term in node.industrySectionTerms" :key="term.key" v-html="term.name" />
-
+          <template  v-if="posttype === 'insights'">
+            <p class="cate-name blue" v-for="term in node.insightCategory" :key="term.key" v-html="term.title"></p>
+          </template>
+          <template  v-if="posttype === 'portfolios'">
+            <p class="cate-name pink" v-for="term in node.industrySectionTerms" :key="term.key" v-html="term.name" />
+          </template>
         </div>
       </div>
       <div class="entry-summary" itemprop="text" v-html="node.excerpt" v-if="node.excerpt" />
@@ -52,6 +56,10 @@ export default {
   props: {
     node: {
       type: Object,
+      required: true,
+    },
+    posttype:{
+      type: String,
       required: true,
     }
   }
