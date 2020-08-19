@@ -23,9 +23,7 @@
               <div class="post-image" >
                 <div class="in-post-image" >
                   <g-image :src="item.node.featuredMedia.sourceUrl" />
-                  <p class="cate-name blue" >
-                    web development
-                  </p>
+                  <p class="cate-name blue" v-for="term in item.node.insightCategory" :key="term.key" v-html="term.title"></p>
                 </div>
               </div>
               <p >
@@ -64,6 +62,11 @@ latestInsights: allWpInsights (limit: 4) {
           sourceUrl
           altText
           title
+        }
+        insightCategory{
+          id
+          title
+          slug
         }
       }
     }
