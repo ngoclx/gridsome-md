@@ -17,7 +17,7 @@
         linkClass="page-link rounded"
         class="pagination justify-content-center"
       /> -->
-      
+      <related-portfolio-block />
       </div>
     </div>
   </Layout>
@@ -53,18 +53,17 @@ query allWpInsights {
   }
 }
 </page-query>
-
 <script>
 import AllInsightBanner from "~/components/AllInsightBanner.vue"
 import PostTeaser from "~/components/PostTeaser.vue"
-//import PortfolioRelated from "~/components/PortfolioRelated.vue";
+import RelatedPortfolioBlock from "~/components/RelatedPortfolioBlock.vue"
 //import { Pager } from "gridsome"
 
 export default {
   components: {
     AllInsightBanner,
     PostTeaser,
-    //PortfolioRelated
+    RelatedPortfolioBlock
     //Pager,
   },
   data() {

@@ -1,12 +1,12 @@
 <template>
-  <section class="archive-bg archive-cont full-width feat-news post-card">
+  <section class="archive-bg archive-cont full-width feat-news post-card portfolio">
     <div class="container" >
       <h2 class="title-section text-center" >
-        Lastest <span >insights</span>
+        Related <span >Case studies</span>
       </h2>
 
       <ul class="row post-list" >
-        <li class="col-lg-4 col-md-6" v-for="item in latest3" :key="item.key">
+        <li class="col-lg-4 col-md-6" v-for="item in related3" :key="item.key">
           <article
             class="hoverEffect cardClick"
           >
@@ -23,7 +23,7 @@
               <div class="post-image" >
                 <div class="in-post-image" >
                   <g-image :src="item.node.featuredMedia.sourceUrl" />
-                  <p class="cate-name blue" v-for="term in item.node.insightCategory" :key="term.key" v-html="term.title" />
+                  <p class="cate-name pink" v-for="term in item.node.serviceProvide" :key="term.key" v-html="term.title" />
                 </div>
               </div>
               <p >
@@ -49,7 +49,7 @@
 
 <static-query>
 query {
-latestInsights: allWpInsights (limit: 4) {
+relatedPortfolio: allWpPortfolio (limit: 4) {
   edges
     {
       node
@@ -63,7 +63,7 @@ latestInsights: allWpInsights (limit: 4) {
           altText
           title
         }
-        insightCategory{
+        serviceProvide{
           id
           title
           slug
@@ -77,32 +77,32 @@ latestInsights: allWpInsights (limit: 4) {
 <script>
 
 export default {
-  name: "LatestInsightsBlock",
+  name: "RelatedPortfolioBlock",
   props: {
-    masterInsight: {
+    masterPortfolio: {
       type: Number,
       required: false,
     }
   },
   computed: {
-    latest3() {
-      if (typeof this.masterInsight == 'undefined') {
-        var latest3 = this.$static.latestInsights.edges.slice(0, 3)       
+    related3() {
+      if (typeof this.masterPortfolio == 'undefined') {
+        var related3 = this.$static.relatedPortfolio.edges.slice(0, 3)       
         
-        return latest3
+        return related3
       }
       else {
-        var latest3 = [];
+        var related3 = [];
         var count = 0
         var i = 0
         while (count < 3) {
-          if (this.$static.latestInsights.edges[i].node.id != this.masterInsight) {
-            latest3[count++] = this.$static.latestInsights.edges[i]
+          if (this.$static.relatedPortfolio.edges[i].node.id != this.masterPortfolio) {
+            related3[count++] = this.$static.relatedPortfolio.edges[i]
           }
           i++
         }
 
-        return latest3
+        return related3
       }
     },
   },
