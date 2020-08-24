@@ -31,7 +31,7 @@ export default {
   name: "WpPage",
   metaInfo() {
     return {
-      title: this.$page.wpPage.title
+      title: this.$page.wpPage.title.replace(/[^&a-zA-Z ]/g, '')
     }
   }
 };

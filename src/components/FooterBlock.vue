@@ -40,7 +40,7 @@
                     class="menu-item"
                   >
                     <g-link :to="s.url | pathname">
-                      {{ s.title }}
+                      {{ removeSpecialCharacter(s.title) }}
                     </g-link>
                   </li>
                 </ul>
@@ -58,7 +58,7 @@
                     class="menu-item"
                   >
                     <g-link :to="t.url | pathname">
-                      {{ t.title }}
+                      {{ removeSpecialCharacter(t.title) }}
                     </g-link>
                   </li>
                 </ul>
@@ -74,7 +74,7 @@
                     class="menu-item"
                   >
                     <g-link :to="m.url | pathname">
-                      {{ m.title }}
+                      {{ removeSpecialCharacter(m.title) }}
                     </g-link>
                   </li>
                 </ul>
@@ -195,7 +195,13 @@ export default {
       var d = new Date();
       var year = d.getFullYear();
       return year
-    }
+    },
+    removeSpecialCharacter(str) {
+        return str.replace(/[^&a-zA-Z ]/g, '')
+    },
+  },
+  computed: {
+      
   },
   mounted() {
     // console.log(this.$static.migMenu)
