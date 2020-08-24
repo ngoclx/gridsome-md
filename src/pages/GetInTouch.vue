@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout hideCalendar="true">
     <div class="container page-template-page-contact">
       <div class="site-padding">
         <div class="entry-header template-header full-width">
@@ -230,12 +230,12 @@
             </ul>
           </div>
         </div>
-
+      
+      </div>
+      <div class="margin-negative insights-lasest-custom">
+        <latest-insights-block />
       </div>
     </div>
-
-    <latest-insights-block />
-
     <b-modal id="highfive" centered hide-footer hide-header no-close-on-backdrop no-close-on-esc>
       <h2>High Five</h2>
       <p>We’ll contact you soon to discuss your requirements.</p>
@@ -252,6 +252,9 @@
 </template>
 
 <style>
+.insights-lasest-custom.margin-negative {
+    margin-bottom: -27rem !important;
+}
   .modal-open .modal{
     background-color: rgba(0,0,0,0.5);
   }

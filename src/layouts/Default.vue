@@ -10,7 +10,7 @@
     </div>
     <slot/>
 
-    <footer-block name="block-footer" />
+    <footer-block name="block-footer" :hideCalendar="hideCalendar" />
 
     <ClientOnly>
         <client-js />
@@ -37,6 +37,12 @@ export default {
     HeaderBlock,
     FooterBlock,
     ClientJs
+  },
+  props: {
+    hideCalendar:{
+      type: Boolean,
+      required: false,
+    }
   },
   methods: {
     breadcrumbItems() {

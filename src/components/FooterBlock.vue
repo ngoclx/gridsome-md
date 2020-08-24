@@ -1,6 +1,7 @@
 <template>
   <div>
-  <calendar-block />
+  <calendar-block v-if="!hideCalendar"/>
+  
   <footer class="site-footer">
     <div class="fat-section">
       <div class="container">
@@ -183,6 +184,12 @@ export default {
   name: "FooterBlock",
   components: {
      CalendarBlock,
+  },
+  props: {
+    hideCalendar:{
+      type: Boolean,
+      required: false,
+    }
   },
   filters: {
     pathname: function (value) {
