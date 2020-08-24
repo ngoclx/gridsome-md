@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <category-view name="insight-tag-section" :categoryTitle="'Insights Tag: ' + $page.wpInsightTag.title" :items="$page.wpInsightTag.belongsTo.edges" />
+    <category-view name="insight-tag-section" :categoryTitle="'Insights / ' + $page.wpInsightTag.title" :items="$page.wpInsightTag.belongsTo.edges" />
   </Layout>
 </template>
 
