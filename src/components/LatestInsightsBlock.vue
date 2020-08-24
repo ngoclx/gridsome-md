@@ -22,7 +22,7 @@
               </header>
               <div class="post-image" >
                 <div class="in-post-image" >
-                  <g-image :src="item.node.featuredMedia.sourceUrl" />
+                  <g-image v-if="item.node.featuredMedia" :src="item.node.featuredMedia.sourceUrl" />
                   <p class="cate-name blue" v-for="term in item.node.insightCategory" :key="term.key" v-html="term.title" />
                 </div>
               </div>

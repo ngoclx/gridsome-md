@@ -16,7 +16,7 @@
       </header>
       <div class="post-image" >
         <div class="in-post-image" >
-          <g-image :src="node.featuredMedia.sourceUrl" width="190" height="300" class="attachment-medium size-medium wp-post-image" />
+          <g-image v-if="node.featuredMedia" :src="node.featuredMedia.sourceUrl" width="190" height="300" class="attachment-medium size-medium wp-post-image" />
 
           <!-- For portfolio specifically -->
           <template  v-if="posttype === 'insights'">
