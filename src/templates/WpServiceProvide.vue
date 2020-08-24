@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <category-view name="service-provide" :categoryTitle="'Service Provided: ' + $page.wpServiceProvide.title" :items="$page.wpServiceProvide.belongsTo.edges" />
+    <category-view name="service-provide" :is_portfolio="'portfolio'" :categoryTitle="'Service Provided: ' + $page.wpServiceProvide.title" :items="$page.wpServiceProvide.belongsTo.edges" />
   </Layout>
 </template>
 

@@ -7,7 +7,7 @@
       <li
         v-for="item in items"
         :key="item.id"
-        class="col-md-6 col-xl-4 post-card"
+        class="col-md-6 col-xl-4 post-card" v-bind:class="is_portfolio"
       >
         <post-teaser :node="item.node" />
       </li>
@@ -31,6 +31,10 @@ export default {
     items: {
       type: Array,
       required: true,
+    },
+    is_portfolio:{
+      type: String,
+      required: false,
     }
   }
 };

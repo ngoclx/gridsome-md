@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <category-view name="industry-section" :categoryTitle="'Industry Section: ' + $page.wpIndustrySection.title" :items="$page.wpIndustrySection.belongsTo.edges" />
+    <category-view name="industry-section" :is_portfolio="'portfolio'" :categoryTitle="'Industry Section: ' + $page.wpIndustrySection.title" :items="$page.wpIndustrySection.belongsTo.edges" />
   </Layout>
 </template>
 
