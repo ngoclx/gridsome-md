@@ -120,7 +120,7 @@
           <div class="copy col-lg-8">
             <p>
               Digital Agency in Sydney specialising in web design, web
-              development, user experience, accessibility and more. © @date-here
+              development, user experience, accessibility and more. © {{ currentYear() }}
               Marameo Design Pty Ltd.
             </p>
           </div>
@@ -188,6 +188,13 @@ export default {
     pathname: function (value) {
       var url = new URL(value)
       return url.pathname
+    }
+  },
+  methods: {
+    currentYear(){
+      var d = new Date();
+      var year = d.getFullYear();
+      return year
     }
   },
   mounted() {
