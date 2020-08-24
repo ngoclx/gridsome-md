@@ -22,7 +22,7 @@
           <template  v-if="posttype === 'insights'">
             <p class="cate-name blue" v-for="term in node.insightCategory" :key="term.key" v-html="term.title"></p>
           </template>
-          <template  v-if="posttype === 'portfolios'">
+          <template  v-else>
             <p class="cate-name pink" v-for="term in node.industrySectionTerms" :key="term.key" v-html="term.name" />
           </template>
         </div>
