@@ -20,6 +20,16 @@ query WpPage ($path: String!) {
     path
     excerpt
     content
+    headTags{
+      tag
+      content
+      attributes{
+        name
+        content
+        title
+        
+      }
+    }
   }
 }
 </page-query>
@@ -30,8 +40,26 @@ query WpPage ($path: String!) {
 export default {
   name: "WpPage",
   metaInfo() {
+    var metaArr = [];
+    var metaAttr = [];
+    if (typeof this.$page.wpPage.headTags != 'undefined') {
+      this.$page.wpPage.headTags.forEach(function(item) {
+        metaArr.push(item.attributes);
+      });
+    }
+    metaArr.forEach(function(item) {
+      if(typeof item === 'object' && item !== null){
+        metaAttr.push(
+          {
+            name : item.name,
+            content: item.content
+          }
+        );
+      }
+    });
     return {
-      title: this.$page.wpPage.title.replace(/[^&a-zA-Z ]/g, '')
+      title: this.$page.wpPage.title.replace(/[^&a-zA-Z ]/g, ''),
+      meta: metaAttr
     }
   }
 };

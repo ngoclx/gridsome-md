@@ -7,12 +7,11 @@
                 <div class="book-project-left col-xl-8 col-lg-12">
                     <div class="intro">
                         <div class="top-section">
-                            <h2 class="title-section">Book a free consultation on how your project should be implemented</h2>
-                            <p class="sub-title">Clear digital thining</p>
+                            <h2 class="title-section">Book a free consultation to discuss your next project</h2>
+                            <p class="sub-title">CLEAR DIGITAL THINKING</p>
                         </div>
                         <p class="description">
-                            We’ll go through your goals and give you our view on how the project should be designed.
-                            We’ll help you with project scoping, implementation or innovating a digital service.
+                            We’ll discuss your goals and share our insights and expertise on your project design, helping you with scoping, implementation or innovating your digital services.
                         </p>
                     </div>
                     <div class="contact-infor">
@@ -31,7 +30,7 @@
                             </div>
                             <div class="col-lg-5 col-md-12 not-feeling-chatty">
                                 <h3>Not feeling chatty</h3>
-                                <a href="" class="pink">Fill in our Project Planner</a>
+                                <a href="/get-in-touch/" class="pink">Fill in our Project Planner</a>
                             </div>
                         </div>
                     </div>
