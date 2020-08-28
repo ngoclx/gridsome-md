@@ -6,6 +6,7 @@
 
 module.exports = {
     siteName: 'Marameo Design',
+    siteUrl: 'https://marameodesign.com',
 
     // Rebuild the project when adding a new route definition (templates)
     templates: {
@@ -18,58 +19,41 @@ module.exports = {
         WpInsightTag: '/insight_tag/:slug',
 
         // Define multiple alias for the same entity (page)
-        WpPage: [{
-                path: '/:slug',
-                component: './src/templates/WpPage.vue'
-            },
-
-            {
-                name: 'services',
-                path: '/services/:slug',
-                component: './src/templates/WpPage.vue'
-            },
-
-            {
-                name: 'strategy-services',
-                path: '/services/strategy-services/:slug',
-                component: './src/templates/WpPage.vue'
-            },
-
-            {
-                name: 'support-maintenance',
-                path: '/services/support-maintenance/:slug',
-                component: './src/templates/WpPage.vue'
-            },
-
-            {
-                name: 'web-design',
-                path: '/services/web-design/:slug',
-                component: './src/templates/WpPage.vue'
-            },
-
-            {
-                name: 'web-development',
-                path: '/services/web-development/:slug',
-                component: './src/templates/WpPage.vue'
-            },
-        ]
+        WpPage: (node) => {
+            return new URL(node.link).pathname
+          }
     },
-    plugins: [{
-        use: '@gridsome/source-wordpress',
-        options: {
-            baseUrl: 'https://cw.marameodesign.com', // required
-            apiBase: 'wp-json',
-            typeName: 'Wp',
-            perPage: 20,
-            concurrent: 10,
-            customEndpoints: [{
-                typeName: "WPMenu",
+    plugins: [
+        {
+            use: '@gridsome/source-wordpress',
+            options: {
+                baseUrl: 'https://cw.marameodesign.com', // required
+                apiBase: 'wp-json',
+                typeName: 'Wp',
+                perPage: 20,
+                concurrent: 10,
+                customEndpoints: [{
+                    typeName: "WPMenu",
 
-                // Custom menu rest api endpoint, check helpers.api.php
-                // - this should be included to your theme or just a new plugin.
-                // Maybe a plugin is good!
-                route: 'menus/all',
-            }],
+                    // Custom menu rest api endpoint, check helpers.api.php
+                    // - this should be included to your theme or just a new plugin.
+                    // Maybe a plugin is good!
+                    route: 'menus/all',
+                }],
+            },
         },
-    }, ]
+        {
+            use: '@gridsome/plugin-sitemap',
+            options: {
+                cacheTime: 600000, // default
+                exclude: [],
+                config: {
+                  '/*': {
+                    changefreq: 'weekly',
+                    priority: 0.5
+                  }
+                }
+              }
+        }
+    ]
 }
