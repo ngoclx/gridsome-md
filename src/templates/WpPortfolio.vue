@@ -52,6 +52,16 @@ query WpPortfolio ($path: String!) {
         title
       }
     }
+    headTags{
+      tag
+      content
+      attributes{
+        name
+        content
+        title
+        
+      }
+    }
   }
 }
 </page-query>
@@ -70,8 +80,26 @@ export default {
     console.log(this.$page.wpPortfolio)
   },
   metaInfo() {
+    var metaArr = [];
+    var metaAttr = [];
+    if (typeof this.$page.wpPortfolio.headTags != 'undefined') {
+      this.$page.wpPortfolio.headTags.forEach(function(item) {
+        metaArr.push(item.attributes);
+      });
+    }
+    metaArr.forEach(function(item) {
+      if(typeof item === 'object' && item !== null){
+        metaAttr.push(
+          {
+            name : item.name,
+            content: item.content
+          }
+        );
+      }
+    });
     return {
       title: this.$page.wpPortfolio.title,
+      meta: metaAttr
     };
   },
 };

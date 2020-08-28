@@ -74,6 +74,16 @@ query WpInsights ($path: String!) {
       name
       avatar
     }
+    headTags{
+      tag
+      content
+      attributes{
+        name
+        content
+        title
+        
+      }
+    }
   }
 }
 </page-query>
@@ -96,8 +106,26 @@ export default {
     }
   },
   metaInfo() {
+    var metaArr = [];
+    var metaAttr = [];
+    if (typeof this.$page.wpInsights.headTags != 'undefined') {
+      this.$page.wpInsights.headTags.forEach(function(item) {
+        metaArr.push(item.attributes);
+      });
+    }
+    metaArr.forEach(function(item) {
+      if(typeof item === 'object' && item !== null){
+        metaAttr.push(
+          {
+            name : item.name,
+            content: item.content
+          }
+        );
+      }
+    });
     return {
       title: this.$page.wpInsights.title,
+      meta: metaAttr
     };
   },
 };
