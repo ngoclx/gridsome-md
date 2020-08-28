@@ -6,6 +6,7 @@
 
 module.exports = {
     siteName: 'Marameo Design',
+    siteUrl: 'https://marameodesign.com',
 
     // Rebuild the project when adding a new route definition (templates)
     templates: {
