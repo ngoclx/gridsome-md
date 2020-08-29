@@ -34,7 +34,7 @@
                   </div>
                   <ul
                     id="mega-menu-primary"
-                    class="mega-menu max-mega-menu mega-menu-horizontal" 
+                    class="mega-menu max-mega-menu mega-menu-horizontal"
                   >
                     <menu-item
                       v-for="item in this.$static.wpMenu.items"
@@ -91,6 +91,6 @@ query {
 
 <script>
 export default {
-  name: "Navbar"
+  name: "Navbar",
 };
 </script>

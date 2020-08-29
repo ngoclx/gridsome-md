@@ -1,7 +1,6 @@
 <template>
-    <span class="meta-info"/>
+  <span class="meta-info" />
 </template>
-
 
 <script>
 export default {
@@ -16,14 +15,13 @@ export default {
       type: String,
       required: true,
     },
-
   },
 
   metaInfo() {
     var metaArr = [];
     var metaAttr = [];
 
-if (this.headTags != "undefined") {
+    if (this.headTags != "undefined") {
       this.headTags.forEach(function(item) {
         metaArr.push(item.attributes);
       });
@@ -34,12 +32,12 @@ if (this.headTags != "undefined") {
           metaAttr.push({
             name: item.name,
             content: item.content,
-          })
+          });
         } else if (item.property) {
           metaAttr.push({
             property: item.property,
             content: item.content,
-          })
+          });
         }
       }
     });

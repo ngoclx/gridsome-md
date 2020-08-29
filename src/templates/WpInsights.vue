@@ -8,12 +8,14 @@
               <span class="sr-only">Tags:</span>
 
               <g-link
-                v-for="tag in $page.wpInsights.insightTag" :key="tag.key"
+                v-for="tag in $page.wpInsights.insightTag"
+                :key="tag.key"
                 :to="tag.path"
                 data-wpel-link="internal"
                 rel="noopener noreferrer"
-                >{{ tag.title }}<span class="comma" aria-hidden="true">, </span></g-link>
-
+                >{{ tag.title
+                }}<span class="comma" aria-hidden="true">, </span></g-link
+              >
             </div>
 
             <h1 class="entry-title" v-html="$page.wpInsights.title" />
@@ -27,17 +29,18 @@
                   />
                 </div>
                 <div class="author-infor col">
-                  <p
-                    class="author-title"
-                    itemprop="author"
-                  >
+                  <p class="author-title" itemprop="author">
                     <span class="sr-only">Author </span>
-                    <span itemprop="name" v-html="$page.wpInsights.authorInfo.name" />
+                    <span
+                      itemprop="name"
+                      v-html="$page.wpInsights.authorInfo.name"
+                    />
                   </p>
                   <p class="published">
                     <span class="sr-only">Published on </span>
-                    <time datetime="2020-07-14" itemprop="datePublished">{{ $page.wpInsights.date | dmy }}</time
-                    >
+                    <time datetime="2020-07-14" itemprop="datePublished">{{
+                      $page.wpInsights.date | dmy
+                    }}</time>
                   </p>
                 </div>
               </div>
@@ -49,11 +52,13 @@
 
       <div v-html="$page.wpInsights.content" />
 
-      <latest-insights-block :masterInsight="$page.wpInsights.id"/>
-
+      <latest-insights-block :masterInsight="$page.wpInsights.id" />
     </div>
 
-    <meta-info :headTags="$page.wpInsights.headTags" :title="$page.wpInsights.title" />
+    <meta-info
+      :headTags="$page.wpInsights.headTags"
+      :title="$page.wpInsights.title"
+    />
   </Layout>
 </template>
 
@@ -91,7 +96,7 @@ query WpInsights ($path: String!) {
 </page-query>
 
 <script>
-import moment from 'moment';
+import moment from "moment";
 import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue";
 import MetaInfo from "~/components/MetaInfo.vue";
 
@@ -105,9 +110,9 @@ export default {
     console.log(this.$page.wpInsights);
   },
   filters: {
-    dmy: function (value) {
-      return moment(value).format('DD MMMM YYYY');
-    }
+    dmy: function(value) {
+      return moment(value).format("DD MMMM YYYY");
+    },
   },
 };
 </script>

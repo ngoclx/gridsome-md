@@ -8,7 +8,7 @@
       </div>
     </div>
 
-    <meta-info :headTags="$page.wpPage.headTags" :title="$page.wpPage.title"/>
+    <meta-info :headTags="$page.wpPage.headTags" :title="$page.wpPage.title" />
   </Layout>
 </template>
 
@@ -36,7 +36,6 @@ query WpPage ($path: String!) {
 </page-query>
 
 <script>
-
 import MetaInfo from "~/components/MetaInfo.vue";
 
 export default {
@@ -45,6 +44,5 @@ export default {
   components: {
     MetaInfo,
   },
-
 };
 </script>

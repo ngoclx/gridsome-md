@@ -8,14 +8,20 @@
             <h1 class="d-none" v-html="$page.wpPortfolio.title" />
             <div v-html="$page.wpPortfolio.content" />
 
-            <portfolio-related name="related-portfolios" :portfolios="$page.wpPortfolio.relatedPortfolios" />
+            <portfolio-related
+              name="related-portfolios"
+              :portfolios="$page.wpPortfolio.relatedPortfolios"
+            />
           </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <meta-info :headTags="$page.wpPortfolio.headTags" :title="$page.wpPortfolio.title"/>
-</Layout>
+    <meta-info
+      :headTags="$page.wpPortfolio.headTags"
+      :title="$page.wpPortfolio.title"
+    />
+  </Layout>
 </template>
 
 <page-query>
@@ -78,7 +84,7 @@ export default {
   components: {
     PortfolioRelated,
     PortfolioBanner,
-    MetaInfo
+    MetaInfo,
   },
 };
 </script>
