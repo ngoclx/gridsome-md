@@ -52,6 +52,8 @@
       <latest-insights-block :masterInsight="$page.wpInsights.id"/>
 
     </div>
+
+    <meta-info :headTags="$page.wpInsights.headTags" :title="$page.wpInsights.title" />
   </Layout>
 </template>
 
@@ -91,11 +93,13 @@ query WpInsights ($path: String!) {
 <script>
 import moment from 'moment';
 import LatestInsightsBlock from "~/components/LatestInsightsBlock.vue";
+import MetaInfo from "~/components/MetaInfo.vue";
 
 export default {
   name: "WpInsights",
   components: {
     LatestInsightsBlock,
+    MetaInfo,
   },
   mounted() {
     console.log(this.$page.wpInsights);
@@ -104,30 +108,6 @@ export default {
     dmy: function (value) {
       return moment(value).format('DD MMMM YYYY');
     }
-  },
-  metaInfo() {
-    var metaArr = [];
-    var metaAttr = [];
-    if (typeof this.$page.wpInsights.headTags != 'undefined') {
-      this.$page.wpInsights.headTags.forEach(function(item) {
-        metaArr.push(item.attributes);
-      });
-    }
-    metaArr.forEach(function(item) {
-      if(typeof item === 'object' && item !== null){
-        metaAttr.push(
-          {
-            name : item.name,
-            property: item.property,
-            content: item.content
-          }
-        );
-      }
-    });
-    return {
-      title: this.$page.wpInsights.title,
-      meta: metaAttr
-    };
   },
 };
 </script>

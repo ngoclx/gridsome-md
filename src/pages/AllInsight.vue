@@ -9,7 +9,7 @@
               :key="item.id"
               class="col-md-6 col-xl-4 post-card"
             >
-              <post-teaser :node="item.node" :posttype="insights" />
+              <post-teaser :node="item.node" posttype="insights" />
             </li>
           </ul>
      <!-- <pager

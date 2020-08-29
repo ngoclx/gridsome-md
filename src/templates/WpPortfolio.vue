@@ -13,6 +13,8 @@
       </div>
     </div>
   </div>
+
+  <meta-info :headTags="$page.wpPortfolio.headTags" :title="$page.wpPortfolio.title"/>
 </Layout>
 </template>
 
@@ -69,39 +71,14 @@ query WpPortfolio ($path: String!) {
 <script>
 import PortfolioRelated from "~/components/PortfolioRelated.vue";
 import PortfolioBanner from "~/components/PortfolioBanner.vue";
+import MetaInfo from "~/components/MetaInfo.vue";
 
 export default {
   name: "WpPortfolio",
   components: {
     PortfolioRelated,
     PortfolioBanner,
-  },
-  mounted() {
-    console.log(this.$page.wpPortfolio)
-  },
-  metaInfo() {
-    var metaArr = [];
-    var metaAttr = [];
-    if (typeof this.$page.wpPortfolio.headTags != 'undefined') {
-      this.$page.wpPortfolio.headTags.forEach(function(item) {
-        metaArr.push(item.attributes);
-      });
-    }
-    metaArr.forEach(function(item) {
-      if(typeof item === 'object' && item !== null){
-        metaAttr.push(
-          {
-            name : item.name,
-            property: item.property,
-            content: item.content
-          }
-        );
-      }
-    });
-    return {
-      title: this.$page.wpPortfolio.title,
-      meta: metaAttr
-    };
+    MetaInfo
   },
 };
 </script>
