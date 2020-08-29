@@ -27,7 +27,7 @@ query WpPage ($path: String!) {
         name
         content
         title
-        
+        property
       }
     }
   }
@@ -52,11 +52,14 @@ export default {
         metaAttr.push(
           {
             name : item.name,
-            content: item.content
+            property: item.property,
+            content: item.content,
           }
         );
       }
     });
+    //metaAttr = metaAttr.obj.filter((value: {}) => Object.keys(value).length !== 0);
+    //metaAttr = metaAttr.filter(val => (val!==undefined) && (val!==null));
     return {
       title: this.$page.wpPage.title.replace(/[^&a-zA-Z ]/g, ''),
       meta: metaAttr

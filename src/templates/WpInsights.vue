@@ -81,7 +81,7 @@ query WpInsights ($path: String!) {
         name
         content
         title
-        
+        property
       }
     }
   }
@@ -118,6 +118,7 @@ export default {
         metaAttr.push(
           {
             name : item.name,
+            property: item.property,
             content: item.content
           }
         );
