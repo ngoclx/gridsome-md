@@ -11,20 +11,19 @@ module.exports = {
     // Rebuild the project when adding a new route definition (templates)
     templates: {
 
-        WpPortfolio: '/portfolio/:slug',
+        WpPortfolio: '/case-studies/:slug',
         WpIndustrySection: '/industry-section/:slug',
         WpServiceProvide: '/service-provided/:slug',
 
         WpInsights: '/insights/:slug',
-        WpInsightTag: '/insight_tag/:slug',
+        WpInsightTag: '/insight-tag/:slug',
 
         // Define multiple alias for the same entity (page)
         WpPage: (node) => {
             return new URL(node.link).pathname
-          }
+        }
     },
-    plugins: [
-        {
+    plugins: [{
             use: '@gridsome/source-wordpress',
             options: {
                 baseUrl: 'https://cw.marameodesign.com', // required
@@ -46,14 +45,20 @@ module.exports = {
             use: '@gridsome/plugin-sitemap',
             options: {
                 cacheTime: 600000, // default
-                exclude: [],
+                exclude: ['/case-studies-2', '/insights-2'],
                 config: {
-                  '/*': {
-                    changefreq: 'weekly',
-                    priority: 0.5
-                  }
+                    '/*': {
+                        changefreq: 'weekly',
+                        priority: 0.5
+                    }
                 }
-              }
-        }
+            }
+        },
+        {
+            use: "gridsome-plugin-htaccess",
+        },
+        {
+            use: 'gridsome-plugin-robots-txt',
+        },
     ]
 }
