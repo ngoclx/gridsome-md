@@ -52,7 +52,7 @@
 
       <div v-html="$page.wpInsights.content" />
 
-      <latest-insights-block :masterInsight="$page.wpInsights.id" />
+      <latest-insights-block :masterInsight="parseInt($page.wpInsights.id)" />
     </div>
 
     <meta-info
