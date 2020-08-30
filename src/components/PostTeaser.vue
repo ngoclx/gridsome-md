@@ -1,9 +1,10 @@
 <template>
   <article
-    class="hoverEffect cardClick"
+    class="hoverEffect"
     itemtype="https://schema.org/CreativeWork"
     itemscope=""
   >
+  <g-link :to="node.path" data-wpel-link="internal" rel="noopener noreferrer" >
     <div class="inside-article" >
       <header class="entry-header" >
         <h2 class="entry-title" itemprop="headline" >
@@ -28,15 +29,9 @@
         </div>
       </div>
       <div class="entry-summary" itemprop="text" v-html="node.excerpt" v-if="node.excerpt" />
-
-
       
-      <p>
-        <g-link
-          :to="node.path"
+      <p
           class="read-more"
-          data-wpel-link="internal"
-          rel="noopener noreferrer"  
           >Read more
           <i
             class="fas fa-arrow-right"
@@ -44,12 +39,17 @@
           ></i
           ><span class="sr-only" >
             of the post "{{ node.title }}"</span
-          ></g-link>
+          >
       </p>
     </div>
+    </g-link>
   </article>
 </template>
-
+<style>
+.post-card article >a{
+  text-decoration: none;
+}
+</style>
 <script>
 export default {
   name: "PostTeaser",

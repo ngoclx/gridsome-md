@@ -8,16 +8,15 @@
       <ul class="row post-list" >
         <li class="col-lg-4 col-md-6" v-for="item in latest3" :key="item.key">
           <article
-            class="hoverEffect cardClick"
+            class="hoverEffect"
           >
+          <g-link :to="item.node.path" data-wpel-link="internal" rel="noopener noreferrer">
             <div class="inside-article" >
               <header class="entry-header" >
                 <h3
                   class="entry-title"
                 >
-                  <g-link
-                    :to="item.node.path"
-                    >{{ item.node.title }}</g-link>
+                  {{ item.node.title }}
                 </h3>
               </header>
               <div class="post-image" >
@@ -26,9 +25,7 @@
                   <p class="cate-name blue" v-for="term in item.node.insightCategory" :key="term.key" v-html="term.title" />
                 </div>
               </div>
-              <p >
-                  <g-link
-                    :to="item.node.path"
+              <p  
                   class="read-more"
                   >Read more
                   <i
@@ -37,9 +34,10 @@
                   ></i
                   ><span class="sr-only" >
                     of the post "{{ item.node.title }}"</span
-                  ></g-link>
+                  >
               </p>
             </div>
+            </g-link>
           </article>
         </li>
       </ul>
@@ -73,7 +71,15 @@ latestInsights: allWpInsights (limit: 4) {
   }
 }
 </static-query>
-
+<style>
+.post-card article >a{
+  text-decoration: none;
+  color: #1d304a;
+}
+.post-card article > a:hover h3{
+  color: #da2e74;
+}
+</style>
 <script>
 
 export default {
