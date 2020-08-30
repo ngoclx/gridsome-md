@@ -23,6 +23,10 @@
 .breadcrumbs nav .breadcrumb .breadcrumb-item.active:after{
   display: none;
 }
+.case-studies-section .in-case-studies ul .post-reference-post article a {
+    color: #04243f;
+    text-decoration: none;
+}
 </style>
 
 
