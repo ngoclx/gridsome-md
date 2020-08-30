@@ -10,7 +10,7 @@ export default function(Vue, { router, head, isClient }) {
     Vue.use(BootstrapVue)
     Vue.use(VueFormulate)
     Vue.use(LoadScript)
-    
+
     Vue.component('Layout', DefaultLayout)
     Vue.component('MenuItem', MenuItem)
 
@@ -28,4 +28,5 @@ export default function(Vue, { router, head, isClient }) {
     });
 }
 
+import '~/wp.css'
 import '~/css/maxmegamenu/style.css'
