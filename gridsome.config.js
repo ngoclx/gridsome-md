@@ -60,5 +60,17 @@ module.exports = {
         {
             use: 'gridsome-plugin-robots-txt',
         },
-    ]
+    ],
+    icon: {
+        favicon: {
+            src: './src/favicon/favicon-32x32.png',
+            sizes: [16]
+        },
+        touchicon: {
+            src: './src/favicon/apple-touch-icon.png',
+            sizes: [192, 512],
+            precomposed: true
+        }
+    }
+
 }
