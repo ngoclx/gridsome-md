@@ -70,6 +70,9 @@ export default {
 };
 </script>
 <style>
+.main-navigation .mega-with-button .mega-indicator-button.mega-indicator[aria-controls]{
+  display: none;
+}
   #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-megamenu.mega-menu-item.mega-menu-item-has-children:hover >ul.mega-sub-menu{
       visibility: visible;
   } 
