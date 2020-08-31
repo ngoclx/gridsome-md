@@ -8,7 +8,7 @@
                     <div class="intro">
                         <div class="top-section">
                             <h2 class="title-section">Book a free consultation to discuss your next project</h2>
-                            <p class="sub-title">CLEAR DIGITAL THINKING</p>
+                            <h3 class="sub-title">CLEAR DIGITAL THINKING</h3>
                         </div>
                         <p class="description">
                             We’ll discuss your goals and share our insights and expertise on your project design, helping you with scoping, implementation or innovating your digital services.
@@ -19,7 +19,7 @@
                             <div class="col-lg-7 col-md-12">
                                 <div class="row">
                                     <div class="col-auto avatar">
-                                        <g-image src="~/images/mara.jpg" alt="Mara Milani" />
+                                        <g-image src="~/images/mara_milani.png" alt="Mara Milani" />
                                     </div>
                                     <div class="col text">
                                         <h3>Mara Milani</h3>

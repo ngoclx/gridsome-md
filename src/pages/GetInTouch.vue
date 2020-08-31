@@ -109,9 +109,9 @@
                 <h2 class="title-section">
                   Contact us today for some clear digital thinking
                 </h2>
-                <p class="sub-title">
+                <h3 class="sub-title">
                   READY TO WORK TOGETHER?
-                </p>
+                </h3>
               </div>
               <div class="intro text-left">
                 <h3>Sydney Office</h3>
@@ -146,7 +146,7 @@
         <div class="find-us">
           <div class="top-section">
             <h2 class="title-section">Our offices</h2>
-            <p class="sub-title">HOW TO FIND US</p>
+            <h3 class="sub-title">HOW TO FIND US</h3>
           </div>
           <div class="our-offices">
             <ul class="row">
