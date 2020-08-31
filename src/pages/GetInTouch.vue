@@ -388,7 +388,8 @@ export default {
       data.append('email', rawData.email)
       data.append('phone', rawData.phone)
       data.append('services', rawData.services)
-      data.append('price', rawData.price)
+      data.append('price', rawData.radio_5)
+      data.append('organization', rawData.organization)
 
       var config = {
         method: 'post',
