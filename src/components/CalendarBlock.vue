@@ -30,7 +30,7 @@
                             </div>
                             <div class="col-lg-5 col-md-12 not-feeling-chatty">
                                 <h3>Not feeling chatty</h3>
-                                <a href="/get-in-touch/" class="pink">Fill in our Project Planner</a>
+                                <a href="/lets-get-started/" class="pink">Fill in our Project Planner</a>
                             </div>
                         </div>
                     </div>
