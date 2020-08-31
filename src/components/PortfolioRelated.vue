@@ -77,5 +77,11 @@ export default {
       }
     },
   },
+  filters: {
+    decodeSpecialChars: function(value) {
+      var he = require('he')
+      return he.decode(value)
+    },
+  },
 };
 </script>

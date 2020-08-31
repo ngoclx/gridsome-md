@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xl-7">
                 <header class="entry-header">
-                    <h1 class="entry-title" itemprop="headline">{{ banner.title }}</h1>
+                    <h1 class="entry-title" itemprop="headline">{{ banner.title | decodeSpecialChars }}</h1>
                 </header>
                 <!-- .entry-header -->
                 <div class="industry-section-terms portfolio-terms pink">
@@ -45,6 +45,11 @@ export default {
       required: true,
     },
   },
-  methods:{}
+  filters: {
+    decodeSpecialChars: function(value) {
+      var he = require('he')
+      return he.decode(value)
+    },
+  },
 };
 </script>

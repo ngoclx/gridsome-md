@@ -12,7 +12,7 @@
             :to="node.path"
             rel="bookmark noopener noreferrer"
             data-wpel-link="internal"
-            >{{ node.title }}</g-link>
+            >{{ node.title | decodeSpecialChars }}</g-link>
         </h2>
       </header>
       <div class="post-image" >
@@ -21,7 +21,7 @@
 
           <!-- For portfolio specifically -->
           <template  v-if="posttype === 'insights'">
-            <p class="cate-name blue" v-for="term in node.insightCategory" :key="term.key" v-html="term.title"></p>
+            <p class="cate-name blue" v-for="term in node.insightCategory" :key="term.key" v-html="term.title | decodeSpecialChars"></p>
           </template>
           <template  v-else>
             <p class="cate-name pink" v-for="term in node.industrySectionTerms" :key="term.key" v-html="term.name" />
@@ -38,7 +38,7 @@
             aria-hidden="true"
           ></i
           ><span class="sr-only" >
-            of the post "{{ node.title }}"</span
+            of the post "{{ node.title | decodeSpecialChars }}"</span
           >
       </p>
     </div>
@@ -62,6 +62,12 @@ export default {
       type: String,
       required: false,
     }
-  }
+  },
+  filters: {
+    decodeSpecialChars: function(value) {
+      var he = require('he')
+      return he.decode(value)
+    },
+  },
 };
 </script>

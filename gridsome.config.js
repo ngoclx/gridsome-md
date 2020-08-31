@@ -1,4 +1,3 @@
-
 module.exports = {
     siteName: 'Marameo Design',
     siteUrl: 'https://marameodesign.com',
