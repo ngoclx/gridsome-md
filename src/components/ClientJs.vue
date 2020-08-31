@@ -102,11 +102,11 @@ export default {
             })
 
             if (windowWidth < 1200) {
-                $("body").on("click", "#mega-menu-wrap-primary #mega-menu-primary a.mega-menu-link", function() {
+                $(".mega-menu-link").click(function() {
                     $('.mega-indicator-button').attr("aria-expanded", "false")
                     $("#menu-mobile").removeClass('open')
                     $("body").removeClass('open')
-                })
+                });
             }
 
             function closeAccordion() {
@@ -118,7 +118,6 @@ export default {
         function megaMenuClasses() {
             $("#mega-menu-primary > li").each(function() {
                 if ($(this).hasClass("mega-menu-grid")) {
-
                     $(this).attr("data-columns", $(this).find(".mega-menu-column").length)
                 }
             })
