@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <div class="overlay" aria-hidden="true"></div>
     <div id="menu-mobile">
       <div class="in_menu-mobile">
         <div class="container">
