@@ -1,5 +1,5 @@
 <template>
-  <Layout :path="$page.wpIndustrySection.path">
+  <Layout :path="$page.wpIndustrySection.path" :ptitle="$page.wpIndustrySection.title">
     <category-view name="industry-section" :is_portfolio="'portfolio'" :categoryTitle="'Industry Section: ' + $page.wpIndustrySection.title" :items="$page.wpIndustrySection.belongsTo.edges" />
   </Layout>
 </template>

@@ -51,7 +51,11 @@ export default {
     path: {
       type: String,
       required: false,
-    }
+    },
+    ptitle: {
+      type: String,
+      required: false,
+    },
   },
   methods: {
     breadcrumbItems() {
@@ -78,14 +82,13 @@ export default {
         var currentPath = "/" + filtered.join("/")
         var last = filtered.pop()
 
-        var pageTitle = _.replace(last, '-', ' ')
-        pageTitle = _.startCase(pageTitle)
-
         if (first) {      
           first = false
-          items.unshift({ text: pageTitle, active: true })
+          items.unshift({ text: this.ptitle, active: true })
         }
         else {
+          var pageTitle = _.replace(last, '-', ' ')
+          pageTitle = _.startCase(pageTitle)
           items.unshift({ text: pageTitle, href: currentPath })
         }
       }

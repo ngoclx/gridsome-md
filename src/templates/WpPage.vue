@@ -1,5 +1,5 @@
 <template>
-  <Layout :path="$page.wpPage.path">
+  <Layout :path="$page.wpPage.path" :ptitle="$page.wpPage.title">
     <div id="page" class="hfeed site grid-container container grid-parent">
       <div id="content" class="site-content">
         <h1 class="d-none" v-html="$page.wpPage.title" />
