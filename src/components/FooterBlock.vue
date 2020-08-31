@@ -126,10 +126,10 @@
             <div class="copy col-lg-8">
               <p>
                 <g-link to="/"> Digital Agency in Sydney</g-link> specialising in 
-                <g-link to="/web-design"> web design</g-link>, 
-                <g-link to="/web-development"> web development</g-link>, 
-                <g-link to="/digital-strategy"> user experience</g-link>, 
-                <g-link to="/web-accessibility"> accessibility</g-link> and more. ©
+                <g-link to="/sydney-digital-agency/web-design/"> web design</g-link>, 
+                <g-link to="/sydney-digital-agency/web-development/"> web development</g-link>, 
+                <g-link to="/sydney-digital-agency/strategy-services/digital-strategy-sydney/"> user experience</g-link>, 
+                <g-link to="/sydney-digital-agency/strategy-services/web-accessibility/"> accessibility</g-link> and more. ©
                 {{ currentYear() }}
                 Marameo Design Pty Ltd.
               </p>
@@ -185,7 +185,13 @@ query {
 }
 
 </static-query>
-
+<style>
+  .site-footer .copy p a:focus, .site-footer .copy p a:hover,
+  .site-footer .terms-and-policy p a:focus, .site-footer .terms-and-policy p a:hover{
+   color: #dc03ae;
+    text-decoration: none;
+  }
+</style>
 <script>
 // import Navbar from "~/components/Navbar.vue";
 import CalendarBlock from "~/components/CalendarBlock.vue";
