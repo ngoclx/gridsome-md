@@ -128,8 +128,8 @@
                 <g-link to="/"> Digital Agency in Sydney</g-link> specialising in 
                 <g-link to="/web-design"> web design</g-link>, 
                 <g-link to="/web-development"> web development</g-link>, 
-                <g-link to="/user-experience"> user experience</g-link>, 
-                <g-link to="/accessibility"> accessibility</g-link> and more. ©
+                <g-link to="/digital-strategy"> user experience</g-link>, 
+                <g-link to="/web-accessibility"> accessibility</g-link> and more. ©
                 {{ currentYear() }}
                 Marameo Design Pty Ltd.
               </p>
