@@ -77,7 +77,7 @@ export default {
                 li.addClass("js")
             })
 
-            $("body").on("click", ".mega-indicator-button", function() {
+            $(".mega-indicator-button").click(function() {
                 if ($(this).attr("aria-expanded") == "false") $(this).attr("aria-expanded", "true")
                 else $(this).attr("aria-expanded", "false")
             })
