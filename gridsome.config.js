@@ -60,6 +60,14 @@ module.exports = {
         {
             use: 'gridsome-plugin-robots-txt',
         },
+        {
+            use: 'gridsome-plugin-gtm',
+            options: {
+                id: 'GTM-M5PTTV3',
+                enabled: true,
+                debug: false
+            }
+        },
     ],
     icon: {
         favicon: {
