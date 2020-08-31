@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :path="$page.wpServiceProvide.path">
     <category-view name="service-provide" :is_portfolio="'portfolio'" :categoryTitle="'Service Provided: ' + $page.wpServiceProvide.title" :items="$page.wpServiceProvide.belongsTo.edges" />
   </Layout>
 </template>
@@ -8,6 +8,7 @@
 query ($path: String!) {
   wpServiceProvide(path: $path) {
     title
+    path  
     belongsTo {
       edges {
         node {

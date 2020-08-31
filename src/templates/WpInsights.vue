@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :path="$page.wpInsights.path">
     <div class="inside-article">
       <div class="entry-content" itemprop="text">
         <div class="narrow">

@@ -1,5 +1,5 @@
 <template>
-  <Layout hideCalendar>
+  <Layout hideCalendar path="/lets-get-started">
     <div class="container page-template-page-contact">
       <div class="site-padding">
         <div class="entry-header template-header full-width">
