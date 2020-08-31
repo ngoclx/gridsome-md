@@ -11,7 +11,10 @@ module.exports = {
     // Rebuild the project when adding a new route definition (templates)
     templates: {
 
-        WpPortfolio: '/case-studies/:slug',
+        WpPortfolio: (node) => {
+            return new URL(node.link).pathname
+        },
+
         WpIndustrySection: '/industry-section/:slug',
         WpServiceProvide: '/service-provided/:slug',
 
