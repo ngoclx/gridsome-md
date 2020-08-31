@@ -22,11 +22,16 @@
       </div>
       <div class="myHeaderWidgets">
             <div class="d-xl-none mobile-logo">
-              <div class="site-logo"><g-image class="header-image"
-              :alt="$static.metadata.siteNam"
-              src="~/images/marameo-logo.svg"
-              :title="$static.metadata.siteNam"
-            /></div>
+              <div class="site-logo">
+              <g-link to="/">
+                <g-image
+                  class="header-image"
+                  :alt="$static.metadata.siteNam"
+                  src="~/images/marameo-logo.svg"
+                  :title="$static.metadata.siteNam"
+                />
+              </g-link>
+            </div>
           </div>
           <g-link to="tel:1300811791" class="d-xl-none call-mobile button pink"
                 >1300 881 791</g-link>

@@ -17,6 +17,7 @@ export default {
             this.$loadScript("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
             this.$loadScript("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
             this.$loadScript("https://cw.marameodesign.com/wp-content/themes/generatepress_child/js/main.js")
+            //this.$loadScript("http://mmd.local/wp-content/themes/generatepress_child/js/main.js")
         })
     }
 }
