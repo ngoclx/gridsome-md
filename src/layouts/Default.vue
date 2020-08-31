@@ -1,6 +1,7 @@
 <template>
   <div class="layout">
     <header-block name="block-header" />
+
     <div class="breadcrumbs full-width">
       <div class="container">
         <nav aria-label="breadcrumb">
@@ -46,16 +47,20 @@ export default {
     hideCalendar:{
       type: Boolean,
       required: false,
+    },
+    path: {
+      type: String,
+      required: false,
     }
   },
   methods: {
     breadcrumbItems() {
       // For server
-      if (typeof window == 'undefined') {
+      if (typeof this.path == 'undefined') {
         return [];
       }
 
-      var path = window.location.pathname
+      var path = this.path
       var elems = path.split("/")
       var filtered = _.reject(elems, _.isEmpty)
 

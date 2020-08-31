@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :path="$page.wpIndustrySection.path">
     <category-view name="industry-section" :is_portfolio="'portfolio'" :categoryTitle="'Industry Section: ' + $page.wpIndustrySection.title" :items="$page.wpIndustrySection.belongsTo.edges" />
   </Layout>
 </template>
@@ -8,6 +8,7 @@
 query ($path: String!) {
   wpIndustrySection(path: $path) {
     title
+    path
     belongsTo {
       edges {
         node {

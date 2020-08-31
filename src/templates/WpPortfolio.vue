@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :path="$page.wpPortfolio.path">
     <div class="single-portfolio">
       <div id="page" class="hfeed site grid-container container grid-parent">
         <div id="content" class="site-content">

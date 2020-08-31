@@ -1,5 +1,5 @@
 <template>
-  <Layout>
+  <Layout :path="$page.wpInsightTag.path">
     <category-view name="insight-tag-section" :categoryTitle="'Insights / ' + $page.wpInsightTag.title" :items="$page.wpInsightTag.belongsTo.edges" />
   </Layout>
 </template>
@@ -8,6 +8,7 @@
 query wpInsightTag ($path: String!) {
   wpInsightTag (path: $path) {
     title
+    path
     belongsTo {
       edges {
         node {
