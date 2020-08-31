@@ -28,7 +28,7 @@
 
                 <g-link
                   class="text-uppercase read-more"
-                  to="/all-insight"
+                  to="/insights"
                   data-wpel-link="internal"
                   rel="noopener noreferrer"
                   >Read all insights</g-link
