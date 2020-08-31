@@ -73,7 +73,11 @@ query WpPortfolio ($path: String!) {
   }
 }
 </page-query>
-
+<style>
+  .single-portfolio{
+    margin-top:-3rem;
+  }
+</style>
 <script>
 import PortfolioRelated from "~/components/PortfolioRelated.vue";
 import PortfolioBanner from "~/components/PortfolioBanner.vue";

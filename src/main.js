@@ -28,5 +28,5 @@ export default function(Vue, { router, head, isClient }) {
     });
 }
 
-import '~/wp.css'
-import '~/css/maxmegamenu/style.css'
+import '~/assets/css/wp.css'
+import '~/assets/css/maxmegamenu/style.css'

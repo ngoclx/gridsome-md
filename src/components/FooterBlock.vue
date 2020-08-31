@@ -128,7 +128,7 @@
                 <g-link to="/"> Digital Agency in Sydney</g-link> specialising in 
                 <g-link to="/sydney-digital-agency/web-design/"> web design</g-link>, 
                 <g-link to="/sydney-digital-agency/web-development/"> web development</g-link>, 
-                <g-link to="/sydney-digital-agency/strategy-services/digital-strategy-sydney/"> user experience</g-link>, 
+                <g-link to="/sydney-digital-agency/strategy-services/digital-strategy/"> user experience</g-link>, 
                 <g-link to="/sydney-digital-agency/strategy-services/web-accessibility/"> accessibility</g-link> and more. ©
                 {{ currentYear() }}
                 Marameo Design Pty Ltd.
