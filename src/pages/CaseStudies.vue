@@ -9,7 +9,7 @@
             :key="item.id"
             class="col-md-6 col-xl-4 post-card portfolio"
           >
-            <post-teaser :node="item.node" :posttype="portfolios" />
+            <post-teaser :node="item.node" posttype="portfolio" />
           </li>
         </ul>
         <latest-insights-block />
