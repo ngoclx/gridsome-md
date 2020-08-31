@@ -3,7 +3,7 @@
     <div id="primary" class="content-area grid-parent mobile-grid-100 grid-75 tablet-grid-75">
     <main id="main" class="site-main">
       <div class="container">
-       ` <div class="inside-article">
+        <div class="inside-article">
           <header class="entry-header">
               <h1 class="entry-title title-with-border" itemprop="headline">Sorry, this page isn't available.</h1>
           </header>
@@ -21,7 +21,7 @@
           </div>
           <!-- .entry-content -->
         </div>
-        <!-- .inside-article -->`
+        <!-- .inside-article -->
         </div>
     </main>
    <!-- #main -->
