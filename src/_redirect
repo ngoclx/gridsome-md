@@ -1,0 +1,70 @@
+# This rule will trigger at /blog/my-old-title
+/blog/my-old-title   /blog/my-new-title
+
+# Service Pages
+/wordpress-developers-sydney/                                           /sydney-digital-agency/web-development/wordpress-development/
+/wordpress-development/                                                 /sydney-digital-agency/web-development/wordpress-development/
+/wordpress-maintenance-service/                                         /sydney-digital-agency/support-maintenance/
+/maintenance-and-support/                                               /sydney-digital-agency/support-maintenance/
+/web-development-sydney/                                                /sydney-digital-agency/web-development/
+/content-strategy/                                                      /sydney-digital-agency/strategy-services/content-strategy/
+/web-design-for-not-for-profits/                                        /sydney-digital-agency/web-design/
+/drupal-developer-sydney/                                               /sydney-digital-agency/web-development/drupal-development/
+/best-practice-drupal-development/                                      /sydney-digital-agency/web-development/drupal-development/
+/digital-strategy/                                                      /sydney-digital-agency/strategy-services/digital-strategy/
+/drupal-website-audits/                                                 /sydney-digital-agency/support-maintenance/website-audit/
+/white-label-website-development-services/                              /sydney-digital-agency/web-development/white-label-web-development/
+/white-label-development-sydney/                                        /sydney-digital-agency/web-development/white-label-web-development/
+/ux-design-sydney/                                                      /sydney-digital-agency/web-design/ux-ui-design/
+/ux-ui-design/                                                          /sydney-digital-agency/web-design/ux-ui-design/
+/website-redesign/                                                      /sydney-digital-agency/web-design/website-redesign/
+/websites-redesign/                                                     /sydney-digital-agency/web-design/website-redesign/
+/web-and-graphic-design/                                                /sydney-digital-agency/web-design/
+/expertise/                                                             /sydney-digital-agency/
+/website-audits/                                                        /sydney-digital-agency/support-maintenance/website-audit/
+/wordpress-drupal-specialist/                                           /our-team/
+/project-planner/                                                       /lets-get-started/
+
+# CASE STUDIES
+/our-work/                                                              /case-studies/
+/work/flexitol-dermal-therapy/                                          /case-studies/flexitol/
+/work/american-university-of-rome/                                      /case-studies/american-university-of-rome/
+/work/centre-for-veterinary-education-sydney-university/                /case-studies/
+/work/possums-online/                                                   /case-studies/possums-online/
+/work/the-george-institute/                                             /case-studies/the-george-institute/
+/portfolio-item/george-institute/                                       /case-studies/the-george-institute/
+/work/natralia/                                                         /case-studies/
+/work/jays-apartments/                                                  /case-studies/
+/work/summers-floral/                                                   /case-studies/
+/work/flag-group/                                                       /case-studies/
+/work/miengineers/                                                      /case-studies/miengineers/
+/work/assentcg/                                                         /case-studies/
+/work/beachhead-group/                                                  /case-studies/
+/work/824/                                                              /case-studies/
+/work/short-sweet/                                                      /case-studies/
+/work/little-bellies/                                                   /case-studies/
+/work/shaf2017/                                                         /case-studies/arts-file
+
+
+# ALL THOSE BELOW needs to simply add /insights/
+/the-ultimate-checklist-before-pushing-a-wordpress-site-live-2019/      /insights/the-ultimate-checklist-before-pushing-a-wordpress-site-live-2020/
+/setup-a-custom-404-page-in-wordpress/                                  /insights/setup-a-custom-404-page-in-wordpress/
+/programmatically-update-all-pages-in-wordpress/                        /insights/programmatically-update-all-pages-in-wordpress/
+/how-to-increase-conversions-automatically-serving-the-right-content-to-the-right-audience-with-geo-targeting/       /insights/how-to-increase-conversions-automatically-serving-the-right-content-to-the-right-audience-with-geo-targeting/
+/never-miss-a-sale-should-an-employee-text-you-when-sick/               /insights/never-miss-a-sale-should-an-employee-text-you-when-sick/
+/how-to-create-gutenberg-blocks-the-easy-way/                           /insights/how-to-create-gutenberg-blocks-the-easy-way/
+/why-should-you-upgrade-to-drupal-8/                                    /insights/why-should-you-upgrade-to-drupal-8/
+/custom-multiple-device-multiple-platform-software-to-support-small-business/       /insights/custom-multiple-device-multiple-platform-software-to-support-small-business/
+/how-automatic-content-import-can-save-you-time-and-money/              /insights/how-automatic-content-import-can-save-you-time-and-money/
+/why-do-you-need-to-have-a-budget-for-your-web-design-project/          /insights/why-do-you-need-to-have-a-budget-for-your-web-design-project/
+/our-website-launch-checklist-essential-checks-before-you-go-live/      /insights/our-website-launch-checklist-essential-checks-before-you-go-live/
+/how-web-accessibility-increases-your-ranking-in-google/                /insights/how-web-accessibility-increases-your-ranking-in-google/
+/how-to-prepare-to-the-next-highly-critical-drupal-security-update/     /insights/how-to-prepare-to-the-next-highly-critical-drupal-security-update/
+
+/uncategorised/
+/security/                                                              /service_provided/security/
+/web-development/                                                       /service_provided/web-development/
+/ux-design/                                                             /service_provided/ux-design/
+/business-success/                                                      /service_provided/business-success/
+/drupal-development/                                                    /service_provided/drupal-development/
+/ongoing-support/                                                       /service_provided/ongoing-support/
