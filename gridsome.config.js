@@ -1,8 +1,3 @@
-// http://localhost:8080/portfolio/artsfile-3/
-// http://localhost:8080/industry-section/education/
-// http://localhost:8080/service-provided/accessibility
-// https://dev.marameodesign.com/wp-json/wp/v2/media
-
 
 module.exports = {
     siteName: 'Marameo Design',

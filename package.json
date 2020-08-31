@@ -2,7 +2,7 @@
   "name": "gridsome-md",
   "private": true,
   "scripts": {
-    "build": "gridsome build",
+    "build": "gridsome build && cp ./src/_redirects ./dist/_rediects",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
