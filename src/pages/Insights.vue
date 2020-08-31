@@ -71,9 +71,87 @@ export default {
         insights: 'insights'
     }
   },
-  metaInfo() {
+   metaInfo() {
     return {
-      title: "Insights",
+      title: "Insights | Sydney Website Design + Web Development Agency » Marameo",
+      meta: [
+        {
+          name: 'dc.title',
+          content: 'Insights | Sydney Website Design + Web Development Agency » Marameo'
+        },
+        {
+          name: 'dc.description',
+          content: 'A collection of useful resources for business owners, marketers and developers crafted by industry professionals.'
+        },
+        {
+          name: 'dc.language',
+          content: 'en_US',
+        },
+        {
+          name: 'robots',
+          content: 'index, follow',
+        },
+        {
+          name: 'googlebot',
+          content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+        },
+        {
+          name: 'bingbot',
+          content: 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1',
+        },
+        {
+          property: 'og:url',
+          content: 'https://marameodesign.com/insights/',
+        },
+        {
+          property: 'og:site_name',
+          content: 'Sydney Website Design + Web Development Agency » Marameo',
+        },
+        {
+          property: 'og:locale',
+          content: 'en_US',
+        },
+        {
+          property: 'og:type',
+          content: 'article',
+        },
+        {
+          property: 'og:title',
+          content: 'Insights | Sydney Website Design + Web Development Agency » Marameo',
+        },
+        {
+          property: 'og:description',
+          content: 'A collection of useful resources for business owners, marketers and developers crafted by industry professionals.',
+        },
+        {
+          property: 'og:image',
+          content: 'https://cw.marameodesign.com/wp-content/uploads/2020/08/insights.png'
+        },
+        {
+          property: 'og:image:secure_url',
+          content: 'https://cw.marameodesign.com/wp-content/uploads/2020/08/insights.png'
+        },
+        {
+          property: 'og:image:alt',
+          content: 'INSIGHTS'
+        },
+        {
+          name: 'twitter:card',
+          content: 'summary'
+        },
+        {
+          name: 'twitter:title',
+          content: 'Insights | Sydney Website Design + Web Development Agency » Marameo'
+        },
+        {
+          name: 'twitter:description',
+          content: 'A collection of useful resources for business owners, marketers and developers crafted by industry professionals.'
+        },
+        {
+          name: 'twitter:image',
+          content: 'https://cw.marameodesign.com/wp-content/uploads/2020/08/insights.png'
+        },
+      ],
     };
   },
   mounted() {
