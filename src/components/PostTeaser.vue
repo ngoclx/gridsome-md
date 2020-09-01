@@ -21,7 +21,7 @@
 
           <!-- For portfolio specifically -->
           <template  v-if="posttype === 'insights'">
-            <p class="cate-name blue" v-for="term in node.insightCategory" :key="term.key" v-html="term.title | decodeSpecialChars"></p>
+            <p class="cate-name blue" v-for="term in node.insightCategory" :key="term.key" v-html="term.title"></p>
           </template>
           <template  v-else>
             <p class="cate-name pink" v-for="term in node.industrySectionTerms" :key="term.key" v-html="term.name" />
