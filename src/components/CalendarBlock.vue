@@ -38,7 +38,7 @@
                 <div class="col-xl-4 col-lg-12 the-calendly">
                     <h2 class="sr-only">Book your project</h2>
                     <!-- Calendly inline widget begin -->
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/marameodesign/schedule-call?hide_event_type_details=1" style="min-width:320px;height:600px;"></div>
+                    <div class="calendly-inline-widget" data-url="https://calendly.com/marameodesign/schedule-call?hide_event_type_details=1" style="min-width:320px;height:750px;"></div>
                     <!-- <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js"></script> -->
                     <!-- Calendly inline widget end -->
                 </div>
@@ -47,7 +47,11 @@
     </div>
 </div>
 </template>
-
+<style>
+    .the-calendly{
+        overflow: auto;
+    }
+</style>
 <script>
 export default {
   name: "calendar-block",
