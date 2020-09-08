@@ -10,9 +10,9 @@
           <g-link to="/">
             <g-image
               class="header-image"
-              :alt="$static.metadata.siteNam"
+              :alt="$static.metadata.siteName"
               src="~/images/marameo-logo.svg"
-              :title="$static.metadata.siteNam"
+              :title="$static.metadata.siteName"
             />
           </g-link>
         </div>
@@ -26,9 +26,9 @@
               <g-link to="/">
                 <g-image
                   class="header-image"
-                  :alt="$static.metadata.siteNam"
+                  :alt="$static.metadata.siteName"
                   src="~/images/marameo-logo.svg"
-                  :title="$static.metadata.siteNam"
+                  :title="$static.metadata.siteName"
                 />
               </g-link>
             </div>
