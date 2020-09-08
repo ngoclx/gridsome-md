@@ -18,6 +18,7 @@ export default {
   },
 
   metaInfo() {
+    let self = this
     var metaArr = [];
     var metaAttr = [];
 
@@ -31,12 +32,12 @@ export default {
         if (item.name) {
           metaAttr.push({
             name: item.name,
-            content: item.content,
+            content: self.changeDomain(item.name, item.content),
           });
         } else if (item.property) {
           metaAttr.push({
             property: item.property,
-            content: item.content,
+            content: self.changeDomain(item.property, item.content),
           });
         }
       }
@@ -46,5 +47,18 @@ export default {
       meta: metaAttr,
     };
   },
+  methods: {
+    changeDomain(property, value) {
+      let siteUrl = 'https://marameodesign.com'
+      var toChange = ['og:url', 'dc.relation', 'dc.source']
+      if (toChange.includes(property)) {
+        var url = new URL(value)
+        return siteUrl + url.pathname
+      }
+      else {
+        return value
+      }
+    }
+  }
 };
 </script>
