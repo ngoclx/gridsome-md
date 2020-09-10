@@ -49,21 +49,27 @@ export default {
       if (typeof item === "object" && item !== null) {
         if (item.name != 'dc.relation' && item.name != 'dc.source' && item.property != 'og:url') {
           if (item.name) {
-            metaTags.push({
-              name: item.name,
-              content: self.changeDomain(item.name, item.content),
-            });
-            if (item.name == 'dc.description') {
+            if (item.content) {
               metaTags.push({
-                name: 'description',
-                content: item.content,
+                name: item.name,
+                content: self.changeDomain(item.name, item.content),
               });
             }
+            if (item.name == 'dc.description') {
+              if (item.content) {
+                metaTags.push({
+                  name: 'description',
+                  content: item.content,
+                });
+              }
+            }
           } else if (item.property) {
-            metaTags.push({
-              property: item.property,
-              content: self.changeDomain(item.property, item.content),
-            });
+            if (item.content) {
+              metaTags.push({
+                property: item.property,
+                content: self.changeDomain(item.property, item.content),
+              });
+            }
           }
         }
       }
