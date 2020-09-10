@@ -64,7 +64,7 @@ export default {
     changeDomain(value) {
       let siteUrl = 'https://marameodesign.com'
       let url = new URL(value)
-      return siteUrl + url.pathname
+      return siteUrl + url.pathname.replace('porfolio', 'case-studies')
     },
 
     breadcrumbItems() {
