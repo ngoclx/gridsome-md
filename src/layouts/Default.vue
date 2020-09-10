@@ -55,43 +55,37 @@ export default {
       type: String,
       required: false,
     },
+    pageAncestors: {
+      type: Array,
+      required: true,
+    }
   },
   methods: {
+    changeDomain(value) {
+      let siteUrl = 'https://marameodesign.com'
+      let url = new URL(value)
+      return siteUrl + url.pathname
+    },
+
     breadcrumbItems() {
-      // For server
-      if (typeof this.path == 'undefined') {
+      let self = this
+
+      if (typeof this.path === 'undefined' || this.path == '/') {
         return [];
-      }
-
-      var path = this.path
-      var elems = path.split("/")
-      var filtered = _.reject(elems, _.isEmpty)
-
-      // No breadcrumb on homepage
-      if (filtered.length == 0) {
-        return []
       }
 
       // Else
       var items = []
-      var first = true
 
-      while (filtered.length > 0)
-      {
-        var currentPath = "/" + filtered.join("/")
-        var last = filtered.pop()
+      // Current page
+      items.unshift({ text: self.ptitle, active: true })
 
-        if (first) {      
-          first = false
-          items.unshift({ text: this.ptitle, active: true })
-        }
-        else {
-          var pageTitle = _.replace(last, '-', ' ')
-          pageTitle = _.startCase(pageTitle)
-          items.unshift({ text: pageTitle, href: currentPath })
-        }
-      }
+      // Ancestor
+      self.pageAncestors.forEach(function(ancestor) {
+        items.unshift({ text: ancestor.title, href: self.changeDomain(ancestor.link) })
+      })
 
+      // Home
       items.unshift({ text: 'Home', href: '/' })
 
       return items

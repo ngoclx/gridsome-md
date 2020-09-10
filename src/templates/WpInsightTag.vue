@@ -1,5 +1,5 @@
 <template>
-  <Layout :path="$page.wpInsightTag.path" :ptitle="$page.wpInsightTag.title">
+  <Layout :path="$page.wpInsightTag.path" :ptitle="$page.wpInsightTag.title" :pageAncestors="[]">
     <category-view name="insight-tag-section" :categoryTitle="'Insights / ' + $page.wpInsightTag.title" :items="$page.wpInsightTag.belongsTo.edges" />
   </Layout>
 </template>

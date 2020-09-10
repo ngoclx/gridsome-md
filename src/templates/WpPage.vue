@@ -1,5 +1,5 @@
 <template>
-  <Layout :path="$page.wpPage.path" :ptitle="$page.wpPage.title">
+  <Layout :path="$page.wpPage.path" :ptitle="$page.wpPage.title" :pageAncestors="$page.wpPage.ancestors">
     <div id="page" class="hfeed site grid-container container grid-parent">
       <div id="content" class="site-content">
         <h1 class="d-none" v-html="$page.wpPage.title" />
@@ -22,6 +22,10 @@ query WpPage ($path: String!) {
     excerpt
     content
     headTags
+    ancestors {
+      title
+      link
+    }
   }
 }
 </page-query>

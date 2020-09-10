@@ -1,5 +1,5 @@
 <template>
-  <Layout :path="$page.wpPortfolio.path" :ptitle="$page.wpPortfolio.title | decodeSpecialChars">
+  <Layout :path="$page.wpPortfolio.path" :ptitle="$page.wpPortfolio.title | decodeSpecialChars" :pageAncestors="[{ title: 'case studies', link: '/case-studies' }]">
     <div class="single-portfolio">
       <div id="page" class="hfeed site grid-container container grid-parent">
         <div id="content" class="site-content">
