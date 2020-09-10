@@ -90,7 +90,7 @@ export default {
       let toChange = ['og:url', 'dc.relation', 'dc.source', 'canonical']
       if (toChange.includes(property)) {
         let url = new URL(value)
-        return siteUrl + url.pathname
+        return siteUrl + url.pathname.replace('portfolio', 'case-studies')
       }
       else {
         return value
