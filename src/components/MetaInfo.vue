@@ -81,9 +81,9 @@ export default {
   methods: {
     changeDomain(property, value) {
       let siteUrl = 'https://marameodesign.com'
-      var toChange = ['og:url', 'dc.relation', 'dc.source']
+      let toChange = ['og:url', 'dc.relation', 'dc.source', 'canonical']
       if (toChange.includes(property)) {
-        var url = new URL(value)
+        let url = new URL(value)
         return siteUrl + url.pathname
       }
       else {
