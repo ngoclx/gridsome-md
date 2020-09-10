@@ -1,5 +1,5 @@
 <template>
-  <Layout path="/case-studies" ptitle="Case Studies">
+  <Layout path="/case-studies" ptitle="Case Studies" :pageAncestors="[]">
     <div id="page" class="hfeed site grid-container container grid-parent">
       <div id="content" class="site-content">
         <case-studies-banner />

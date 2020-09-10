@@ -1,5 +1,5 @@
 <template>
-  <Layout path="/404" ptitle="Page not found">
+  <Layout path="/404" ptitle="Page not found" :pageAncestors="[]">
     <div id="primary" class="content-area grid-parent mobile-grid-100 grid-75 tablet-grid-75">
     <main id="main" class="site-main">
       <div class="container">

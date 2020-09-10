@@ -1,5 +1,5 @@
 <template>
-  <Layout hideCalendar path="/lets-get-started" ptitle="Let's Get Started">
+  <Layout hideCalendar path="/lets-get-started" ptitle="Let's Get Started" :pageAncestors="[]">
     <div class="container page-template-page-contact">
       <div class="site-padding">
         <div class="entry-header template-header full-width">

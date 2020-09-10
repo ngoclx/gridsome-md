@@ -1,5 +1,5 @@
 <template>
-  <Layout path="/insights" ptitle="Insights">
+  <Layout path="/insights" ptitle="Insights" :pageAncestors="[]">
     <div id="page" class="hfeed site grid-container container grid-parent">
       <div id="content" class="site-content">
         <all-insight-banner />
