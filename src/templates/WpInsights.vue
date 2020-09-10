@@ -1,5 +1,5 @@
 <template>
-  <Layout :path="$page.wpInsights.path" :ptitle="$page.wpInsights.title" :pageAncestors="[{ title: 'insights', link: '/insights' }]">
+  <Layout :path="$page.wpInsights.path" :ptitle="$page.wpInsights.title" :pageAncestors="[{ title: 'insights', link: 'https://marameodesign.com/insights' }]">
     <div class="inside-article">
       <div class="entry-content" itemprop="text">
         <div class="narrow">
