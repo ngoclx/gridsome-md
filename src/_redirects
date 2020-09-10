@@ -62,9 +62,9 @@
 /how-to-prepare-to-the-next-highly-critical-drupal-security-update/     /insights/how-to-prepare-to-the-next-highly-critical-drupal-security-update/
 
 /uncategorised/
-/security/                                                              /service_provided/security/
-/web-development/                                                       /service_provided/web-development/
-/ux-design/                                                             /service_provided/ux-design/
-/business-success/                                                      /service_provided/business-success/
-/drupal-development/                                                    /service_provided/drupal-development/
-/ongoing-support/                                                       /service_provided/ongoing-support/
+/security/                                                              /service-provided/security/
+/web-development/                                                       /service-provided/web-development/
+/ux-design/                                                             /service-provided/ux-design/
+/business-success/                                                      /service-provided/business-success/
+/drupal-development/                                                    /service-provided/drupal-development/
+/ongoing-support/                                                       /service-provided/ongoing-support/
