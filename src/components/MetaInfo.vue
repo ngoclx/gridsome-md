@@ -25,7 +25,6 @@ export default {
     var canonicalLink = 'https://marameodesign.com'
 
     var encodedHeadTags = JSON.parse(self.headTags)
-    console.log(encodedHeadTags)
     if (encodedHeadTags !== "undefined") {
       encodedHeadTags.forEach(function(item) {
         // if (item.tag == "link") console.log(item)
@@ -36,7 +35,7 @@ export default {
           metaTitle = item.content
         }
         else if (item.tag == "link" && item.attributes.rel == "canonical") {
-          canonicalLink = item.attributes.href
+          canonicalLink = self.changeDomain('canonical', item.attributes.href)
         }
       });
     }
