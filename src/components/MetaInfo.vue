@@ -8,7 +8,7 @@ export default {
 
   props: {
     headTags: {
-      type: Array,
+      type: String,
       required: true,
     },
     title: {
@@ -19,32 +19,64 @@ export default {
 
   metaInfo() {
     let self = this
-    var metaArr = [];
-    var metaAttr = [];
+    var rawMetaTags = []
+    var metaTags = []
+    var metaTitle = ''
+    var canonicalLink = 'https://marameodesign.com'
 
-    if (this.headTags != "undefined") {
-      this.headTags.forEach(function(item) {
-        metaArr.push(item.attributes);
+    var encodedHeadTags = JSON.parse(self.headTags)
+    console.log(encodedHeadTags)
+    if (encodedHeadTags !== "undefined") {
+      encodedHeadTags.forEach(function(item) {
+        // if (item.tag == "link") console.log(item)
+        if (item.tag == "meta") {
+          rawMetaTags.push(item.attributes);
+        }
+        else if (item.tag == "title") {
+          metaTitle = item.content
+        }
+        else if (item.tag == "link" && item.attributes.rel == "canonical") {
+          canonicalLink = item.attributes.href
+        }
       });
     }
-    metaArr.forEach(function(item) {
+
+    metaTags.push({
+      property: 'og:url',
+      content: canonicalLink
+    })
+
+    rawMetaTags.forEach(function(item) {
       if (typeof item === "object" && item !== null) {
-        if (item.name) {
-          metaAttr.push({
-            name: item.name,
-            content: self.changeDomain(item.name, item.content),
-          });
-        } else if (item.property) {
-          metaAttr.push({
-            property: item.property,
-            content: self.changeDomain(item.property, item.content),
-          });
+        if (item.name != 'dc.relation' && item.name != 'dc.source' && item.property != 'og:url') {
+          if (item.name) {
+            metaTags.push({
+              name: item.name,
+              content: self.changeDomain(item.name, item.content),
+            });
+            if (item.name == 'dc.description') {
+              metaTags.push({
+                name: 'description',
+                content: item.content,
+              });
+            }
+          } else if (item.property) {
+            metaTags.push({
+              property: item.property,
+              content: self.changeDomain(item.property, item.content),
+            });
+          }
         }
       }
-    });
+    })
+
     return {
-      title: this.title.replace(/[^&a-zA-Z ]/g, ""),
-      meta: metaAttr,
+      title: metaTitle ? metaTitle : self.title,
+      titleTemplate: '%s',
+      meta: metaTags,
+      link: [
+        { rel: 'canonical', href: canonicalLink }
+      ]
     };
   },
   methods: {

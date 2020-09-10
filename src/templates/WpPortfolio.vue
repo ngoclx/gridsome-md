@@ -60,16 +60,7 @@ query WpPortfolio ($path: String!) {
         title
       }
     }
-    headTags{
-      tag
-      content
-      attributes{
-        name
-        content
-        title
-        property
-      }
-    }
+    headTags
   }
 }
 </page-query>

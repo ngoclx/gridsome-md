@@ -81,16 +81,7 @@ query WpInsights ($path: String!) {
       name
       avatar
     }
-    headTags{
-      tag
-      content
-      attributes{
-        name
-        content
-        title
-        property
-      }
-    }
+    headTags
   }
 }
 </page-query>
