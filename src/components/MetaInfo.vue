@@ -49,6 +49,13 @@ export default {
       if (typeof item === "object" && item !== null) {
         if (item.name != 'dc.relation' && item.name != 'dc.source' && item.property != 'og:url') {
           if (item.name) {
+            if (item.name == 'robots') {
+              metaTags.push({
+                name: 'robots',
+                content: 'all',
+              });
+              return;
+            }
             if (item.content) {
               metaTags.push({
                 name: item.name,
