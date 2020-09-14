@@ -76,13 +76,14 @@ export default {
 
       // Else
       var items = []
+      let he = require('he')
 
       // Current page
-      items.unshift({ text: self.ptitle, active: true })
+      items.unshift({ text: he.decode(self.ptitle), active: true })
 
       // Ancestor
       self.pageAncestors.forEach(function(ancestor) {
-        items.unshift({ text: ancestor.title, href: self.changeDomain(ancestor.link) })
+        items.unshift({ text: he.decode(ancestor.title), href: self.changeDomain(ancestor.link) })
       })
 
       // Home

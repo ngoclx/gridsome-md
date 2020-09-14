@@ -252,6 +252,10 @@
 </template>
 
 <style>
+.page-template-page-contact .contact .intro a,
+.page-template-page-contact .our-offices li a{
+  border-bottom: none;
+}
 .insights-lasest-custom.margin-negative {
     margin-bottom: -27rem !important;
 }
