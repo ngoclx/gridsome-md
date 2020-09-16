@@ -12,7 +12,7 @@ export default {
     },
     mounted() {
         // Load external scripts for clients
-        this.$loadScript("https://code.jquery.com/jquery-3.5.1.min.js").then(() => {
+            this.$loadScript("https://code.jquery.com/jquery-3.5.1.min.js").then(() => {
             this.$loadScript("https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
             this.$loadScript("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
             this.$loadScript("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
@@ -180,6 +180,8 @@ export default {
                 // Remove links that don't actually link to anything
                 .not('[href="#"]')
                 .not('[href="#0"]')
+                .not('.carousel-control-prev')
+                .not('.carousel-control-next')
                 .click(function(event) {
                     // On-page links
                     if (
