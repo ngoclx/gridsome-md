@@ -1,0 +1,173 @@
+@mixin media($min-width) {
+    @media (min-width: $min-width) {
+        @content;
+    }
+}
+
+@mixin absoluteImage {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin ulReset {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+@mixin font-awesome {
+    position: absolute;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+}
+
+@mixin hidden {
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+@mixin postion-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+@mixin transition {
+    transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -ms-transition: all 0.3s ease-in-out 0s;
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+@mixin transitionImg {
+    transition-duration: 0.5s;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+    -ms-transition-duration: 0.5s;
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+@mixin scale {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    @media (prefers-reduced-motion: reduce) {
+        transform: none;
+    }
+}
+
+@mixin btnPinkGradient {
+    // background: linear-gradient(147deg, $light-pink 0%, $pink 100%);
+    // background: -ms-linear-gradient(147deg, $light-pink 0%, $pink 100%);
+    // background: -o-linear-gradient(147deg, $light-pink 0%, $pink 100%);
+    // background: -webkit-linear-gradient(147deg, $light-pink 0%, $pink 100%);
+    // background: -moz-linear-gradient(147deg, $light-pink 0%, $pink 100%);
+    background-image: linear-gradient(147deg, $light-pink 0%, $dark-pink 100%);
+    background-image: -ms-linear-gradient(147deg, $light-pink 0%, $dark-pink 100%);
+    background-image: -o-linear-gradient(147deg, $light-pink 0%, $dark-pink 100%);
+    background-image: -webkit-linear-gradient(147deg, $light-pink 0%, $dark-pink 100%);
+    background-image: -moz-linear-gradient(147deg, $light-pink 0%, $dark-pink 100%);
+}
+
+@mixin btnBlueGradient {
+    background-image: linear-gradient(147deg, $light-blue 0%, $main-blue 100%);
+    background-image: -ms-linear-gradient(147deg, $light-blue 0%, $main-blue 100%);
+    background-image: -o-linear-gradient(147deg, $light-blue 0%, $main-blue 100%);
+    background-image: -webkit-linear-gradient(147deg, $light-blue 0%, $main-blue 100%);
+    background-image: -moz-linear-gradient(147deg, $light-blue 0%, $main-blue 100%);
+}
+
+@mixin featured-text {
+    font-size: 2.2rem;
+    font-family: $font-GTWalsheimPro-light;
+    line-height: 3rem;
+    margin-bottom: 3rem;
+    @include media(768px) {
+        font-size: 2.5rem;
+        line-height: 3.3rem;
+    }
+}
+
+@mixin backgroundBlueOverlay {
+    background-image: linear-gradient(179deg, rgba(12, 170, 222, 0.00) 0%, rgba(12, 170, 222, 0.04) 100%);
+    background-image: -webkit-linear-gradient(179deg, rgba(12, 170, 222, 0.00) 0%, rgba(12, 170, 222, 0.04) 100%);
+    background-image: -ms-linear-gradient(179deg, rgba(12, 170, 222, 0.00) 0%, rgba(12, 170, 222, 0.04) 100%);
+    background-image: -o-linear-gradient(179deg, rgba(12, 170, 222, 0.00) 0%, rgba(12, 170, 222, 0.04) 100%);
+    background-image: -moz-linear-gradient(179deg, rgba(12, 170, 222, 0.00) 0%, rgba(12, 170, 222, 0.04) 100%);
+}
+
+@mixin box-shadow {
+    border: 1px solid #f2f2f2;
+    -webkit-box-shadow: 0 0 3000px 20px rgba(0, 0, 0, .05);
+    box-shadow: 0 0 3000px 20px rgba(0, 0, 0, .05);
+}
+
+@mixin backgroundPost {
+    background-image: linear-gradient(179deg, rgba(218, 44, 121, .07) 0, rgba(12, 170, 222, .15) 100%);
+    background-image: -webkit-linear-gradient(179deg, rgba(218, 44, 121, .07) 0, rgba(12, 170, 222, .15) 100%);
+    background-image: -ms-linear-gradient(179deg, rgba(218, 44, 121, .07) 0, rgba(12, 170, 222, .15) 100%);
+    background-image: -o-linear-gradient(179deg, rgba(218, 44, 121, .07) 0, rgba(12, 170, 222, .15) 100%);
+    background-image: -moz-linear-gradient(179deg, rgba(218, 44, 121, .07) 0, rgba(12, 170, 222, .15) 100%);
+}
+
+@mixin absoluteImage {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    margin-bottom: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@mixin breakLink {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+
+@mixin rotate180() {
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}

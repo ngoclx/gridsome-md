@@ -12,10 +12,11 @@ export default {
     },
     mounted() {
         // Load external scripts for clients
-            this.$loadScript("https://code.jquery.com/jquery-3.5.1.min.js").then(() => {
-            this.$loadScript("https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
-            this.$loadScript("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
-            this.$loadScript("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+            this.$loadScript("https://code.jquery.com/jquery-3.3.1.slim.min.js").then(() => {
+            //this.$loadScript("https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js")
+            //this.$loadScript("https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+            //this.$loadScript("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+            this.$loadScript("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js")
         })
 
         const $ = require('jquery')
@@ -26,7 +27,7 @@ export default {
         postReferenceClick()
         mobileMenu()
         stickyHeader()
-        masonry()
+        //masonry()
         megaMenuClasses()
         externalLinksContext()
         internalAnchors()

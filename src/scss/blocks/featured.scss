@@ -1,0 +1,23 @@
+.featured-custom {
+    margin: 0 0 4rem;
+    img {
+        width: 100%;
+        border-radius: 27px;
+        object-fit: cover;
+    }
+}
+
+.full-width {
+    .featured-custom {
+        img {
+            border-radius: 0;
+        }
+    }
+}
+
+.featured-text {
+    margin: 0 0 3rem;
+    p {
+        @include featured-text;
+    }
+}

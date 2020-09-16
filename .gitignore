@@ -8,3 +8,5 @@ dist
 .env
 .env.*
 wp-images
+src/.sass-cache/
+src/style.css.map

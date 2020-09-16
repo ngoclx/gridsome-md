@@ -1,0 +1,272 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body {
+    overflow-x: hidden;
+    &.no-overflow-y {
+        overflow-y: hidden;
+    }
+}
+
+.alignfull,
+.full-width {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.container {
+    max-width: $container-width;
+    padding-left: $container-lateral-padding;
+    padding-right: $container-lateral-padding;
+}
+
+.screen-reader-shortcut,
+.screen-reader-text {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.screen-reader-shortcut:focus,
+.screen-reader-text:focus {
+    clip: auto !important;
+    height: auto;
+    width: auto;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 15px 23px 14px;
+    color: #333;
+    background: #fff;
+    z-index: 100000;
+    /* Above WP toolbar. */
+    text-decoration: none;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .6);
+}
+
+.row {
+    padding: 0;
+    margin-bottom: 0;
+    list-style: none;
+    &>li {
+        margin-bottom: 3rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 2px solid #df5caf;
+    &:hover,
+    &:focus {
+        color: #df5caf;
+        text-decoration: none;
+    }
+}
+
+.site-header .insideHeader .site-logo a,
+.breadcrumbs nav .breadcrumb .breadcrumb-item a,
+.read-more,
+.category-summary-block .in-category .page-child-list li a,
+.site-footer .insights-lastest-post ul li a,
+.site-footer .copy p a,
+.site-footer .terms-and-policy p a,
+.in-book-project .book-project-left p a,
+.in-book-project .book-project-left .not-feeling-chatty a,
+.full-service .services li .in-services,
+.case-studies-section .in-case-studies ul .post-reference-post article a,
+.partnerships-section .reviews a,
+.carousel-custom .carousel-control-next,
+.carousel-custom .carousel-control-prev,
+.post-card article .inside-article .entry-header .entry-title a,
+.post-card article a,
+.single-portfolio .portfolio-terms.pink ul li a,
+.single-portfolio .portfolio-terms.blue ul li a,
+.post-tag a,
+.site-header .myHeaderWidgets .mobile-logo .site-logo a,
+.site-header .site-logo a {
+    border-bottom: none;
+}
+
+.site-content {
+    padding-bottom: 5rem;
+}
+
+//focus
+a[href],
+area[href],
+input:not([disabled]),
+select:not([disabled]),
+textarea:not([disabled]),
+button:not([disabled]),
+iframe,
+object,
+embed,
+[tabindex="0"],
+[contenteditable] {
+    &:focus {
+        outline: 2px solid $pink;
+        outline-offset: 2px;
+    }
+}
+
+.pink {
+    color: $pink;
+}
+
+.sub-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $light-pink;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-family: $font-nunito;
+}
+
+.top-section {
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column-reverse;
+}
+
+.title-section {
+    font-size: 3rem;
+    color: $main-blue;
+    font-family: $font-GTWalsheimPro-medium;
+    @include media(992px) {
+        font-size: 3.6rem;
+    }
+    span {
+        //margin-left: 0.8rem;
+        font-family: $font-GTWalsheimPro-lightoblique;
+    }
+}
+
+.narrow {
+    max-width: $container-tiny-width;
+    padding: 0 $container-lateral-padding;
+    margin-left: auto;
+    margin-right: auto;
+    &.narrow-left,
+    &.text-left {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &.text-center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.container {
+    .nopadding {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+body {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+.container {
+    .narrow {
+        padding: 0;
+    }
+}
+
+.intro-text {
+    @include featured-text;
+}
+
+.read-more {
+    color: $main-blue;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $light-pink;
+    }
+    i {
+        color: $light-blue;
+        margin-left: 1rem;
+    }
+    font-size: 1.6rem;
+    @include media(768px) {
+        font-size: 1.8rem;
+    }
+}
+
+.custom-blocks {
+    &.active-bg {
+        // position: relative;
+        // z-index: 1;
+        background: #f5fcfe;
+        padding: 4rem 0;
+        margin-bottom: 4rem;
+        &:before {
+            //content: "";
+            background: #f5fcfe;
+            position: absolute;
+            top: -2rem;
+            bottom: -1rem;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            z-index: -1;
+        }
+    }
+}
+
+.banner-block+.wp-block-columns {
+    display: block;
+}
+
+.single-portfolio {
+    .wp-block-gallery {
+        &.container {
+            position: static;
+            margin: 0 auto;
+            padding: 0;
+        }
+        &.narrow {
+            position: static;
+            padding: 0;
+        }
+    }
+}

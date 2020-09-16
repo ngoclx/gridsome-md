@@ -1,0 +1,82 @@
+/* TYPOGRAPHY */
+
+//@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i&display=swap');
+$line-height-base: 1.5;
+$font-size-h1: 4.2rem;
+$font-size-h2: 3.6rem;
+$font-size-h3: 3rem;
+$font-size-h4: 2.6rem;
+$font-size-h5: 2rem;
+$font-size-h6: 1.8rem;
+@font-face {
+    font-family: 'GTWalsheimPro Medium';
+    src: url("fonts/GTWalsheimPro-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro Light';
+    src: url("fonts/GTWalsheimPro-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'GTWalsheimPro LightOblique';
+    src: url("fonts/GTWalsheimPro-LightOblique.ttf");
+    font-weight: 300;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: $font-nunito;
+    line-height: $line-height-base;
+    font-weight: 400;
+    color: $body-text;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: $font-GTWalsheimPro-medium;
+}
+
+h5,
+h6 {
+    //font-family: $font-GTWalsheimPro-regular;
+    font-family: $font-GTWalsheimPro-medium;
+}
+
+h1 {
+    font-size: $font-size-h1;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: $font-size-h2;
+    margin-bottom: 1.5rem;
+    color: $main-blue;
+}
+
+h3 {
+    font-size: $font-size-h3;
+}
+
+h4 {
+    font-size: $font-size-h4;
+    color: $main-blue;
+}
+
+h5 {
+    font-size: $font-size-h5;
+    color: $pink;
+}
+
+h6 {
+    font-size: $font-size-h6;
+    color: $pink;
+}

@@ -1,0 +1,224 @@
+.page-template-page-contact {
+    .template-header {
+        padding-bottom: 5rem;
+        @include media(1200px) {
+            padding-top: 6rem;
+        }
+        .row {
+            align-items: flex-start;
+        }
+        .template-header-text {
+            margin-bottom: 3rem;
+            @include media(1200px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .contact {
+        padding-bottom: 10rem;
+        .intro {
+            h3 {
+                margin-top: 3rem;
+                font-size: 2.6rem;
+            }
+            a {
+                color: $body-text;
+                text-decoration: none;
+                &:hover,
+                &:focus {
+                    color: $light-pink;
+                }
+            }
+        }
+    }
+    .our-offices {
+        li {
+            img {
+                border-radius: 27px;
+                margin-bottom: 2rem;
+                width: 100%;
+            }
+            .sub-title {
+                margin-bottom: 1rem;
+            }
+            h3 {
+                font-size: 2.6rem;
+            }
+            a {
+                color: $body-text;
+                text-decoration: underline;
+                &:hover,
+                &:focus {
+                    color: $light-pink;
+                }
+            }
+        }
+    }
+}
+
+.enquiry {
+    @include media(1200px) {
+        position: absolute;
+        top: -3rem;
+        left: 1.5rem;
+        right: 3rem;
+    }
+    .frm_forms {
+        @include box-shadow;
+        background: #fff;
+        padding: 3rem 3rem 1rem;
+        border-radius: 18px;
+    }
+    .sub-title {
+        font-family: $font-nunito;
+    }
+    h2 {
+        color: $dark-blue;
+        font-family: $font-GTWalsheimPro-medium;
+    }
+    .with_frm_style {
+        .frm_required {
+            color: $light-pink;
+        }
+        .frm_top_container {
+            .frm_primary_label {
+                font-weight: 700;
+                font-size: 1.9rem;
+                color: $body-text;
+                font-family: $font-nunito;
+            }
+        }
+        input[type=text],
+        input[type=email],
+        input[type=tel],
+        textarea {
+            background: #FFFFFF;
+            border: 1px solid #E3E3E3;
+            border-radius: 5px;
+            border-radius: 5px;
+            height: 46px;
+            font-family: $font-nunito !important;
+            color: $body-text;
+            font-size: 1.9rem;
+        }
+        textarea {
+            height: auto;
+        }
+        .frm_submit {
+            text-align: right;
+            button {
+                @extend .button;
+                @include btnPinkGradient;
+                color: #fff;
+                //font-size: 2.1rem;
+                //font-family: $font-GTWalsheimPro-medium;
+                font-family: $font-nunito;
+                &:focus,
+                &:hover {
+                    background-image: linear-gradient(-147deg, $dark-pink 0%, $light-pink 100%);
+                    color: #fff;
+                }
+            }
+        }
+        .frm_message,
+        .frm_error_style {
+            color: $body-text !important;
+            border-color: transparent;
+            background: transparent;
+            p {
+                font-size: 1.8rem !important;
+                color: $body-text !important;
+            }
+        }
+        .frm_error_style {
+            color: #B94A48 !important;
+            p {
+                color: #B94A48 !important;
+            }
+        }
+    }
+    .frm_radio {
+        label {
+            position: relative;
+            //background: rgba($light-blue, 0.13);
+            //border: 1px solid #C5E8F4;
+            color: $body-text;
+            font-family: $font-nunito;
+            font-size: 1.9rem;
+            border-radius: 5px;
+            padding: .6rem 1.5rem;
+            display: block;
+            z-index: 1;
+            cursor: pointer;
+            span {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    bottom: 0;
+                    border: 1px solid #C5E8F4;
+                    background: rgba($light-blue, 0.13);
+                    border-radius: 5px;
+                }
+            }
+            input[type="radio"] {
+                display: none;
+            }
+            input[type="radio"]:checked+span:before {
+                @include btnBlueGradient;
+                z-index: -1;
+            }
+        }
+    }
+    .frm_error {
+        color: #000;
+        margin-top: 0.5rem !important;
+        border-left: 10px solid #B94A48;
+        padding-left: 0.5rem !important;
+        font-family: $font-nunito !important;
+        font-weight: 700 !important;
+        font-size: 1.4rem !important;
+    }
+}
+
+.enquiry .frm_radio label.active,
+.enquiry .frm_radio label:focus {
+    color: #fff;
+}
+
+.insights-lasest-custom {
+    &.margin-negative {
+        margin-bottom: -34rem;
+    }
+    margin-top: 5rem;
+    .full-width {
+        width: 100%;
+        position: static;
+        margin: 0 auto;
+    }
+    .feat-news {
+        &:before {
+            content: "" !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background: #fff;
+            border-radius: 27px;
+            @include box-shadow;
+            @include media(1470px) {
+                left: -3rem;
+                right: -3rem;
+            }
+        }
+    }
+}

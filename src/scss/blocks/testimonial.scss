@@ -1,0 +1,70 @@
+.testimonial-blocks {
+    margin: 5rem 0 4rem;
+    .testimonial-group {
+        background-color: $light-grey;
+        border-radius: 19px;
+        position: relative;
+        padding: 4rem 2rem;
+        @include media(768px) {
+            padding: 5rem 3rem;
+        }
+        @include media(992px) {
+            padding: 8rem 5rem;
+        }
+        &:after,
+        &:before {
+            content: "";
+            position: absolute;
+            width: 10.7rem;
+            height: 8rem;
+        }
+        &:after {
+            background: url($quote-left) no-repeat top left;
+            top: -2.7rem;
+            left: -0.8rem;
+            background-size: 70%;
+            @include media(992px) {
+                background-size: 100%;
+                left: -2.9rem;
+            }
+        }
+        &:before {
+            background: url($quote-right) no-repeat bottom right;
+            bottom: -2rem;
+            right: -0.8rem;
+            background-size: 70%;
+            @include media(992px) {
+                background-size: 100%;
+                right: -2rem;
+            }
+        }
+        .testimonial-text {
+            margin: 0 0 3rem;
+            color: $body-text;
+            font-size: 2.2rem;
+            line-height: 2.6rem;
+            font-family: $font-GTWalsheimPro-light;
+            p {
+                margin-bottom: 2rem;
+            }
+            @include media(768px) {
+                font-size: 2.6rem;
+                line-height: 3rem;
+            }
+        }
+        .testimonial-name {
+            font-size: 1.8rem;
+            //font-family: $font-GTWalsheimPro-bold;
+            font-family: $font-GTWalsheimPro-medium;
+            span {
+                //font-family: $font-GTWalsheimPro-regularoblique;
+                font-family: $font-GTWalsheimPro-lightoblique;
+                display: block;
+                @include media(992px) {
+                    margin-left: 2rem;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.copy-image {
+    margin-bottom: 4rem;
+    .header-top {
+        margin-bottom: 3rem;
+        &.text-center {
+            &+.buttons {
+                text-align: center;
+            }
+        }
+    }
+    [class*="col-"] {
+        order: 1;
+        //padding: 0;
+        &.no-padding {
+            padding: 0;
+            &.img-first {
+                padding-left: 1.5rem;
+            }
+        }
+    }
+    .order {
+        order: 0;
+    }
+    .in_custom-block {
+        .container {
+            //padding-left: 0;
+            //padding-right: 0;
+        }
+    }
+    .in_content {
+        padding: 1rem $container-lateral-padding 3rem;
+        &>*:last-child {
+            margin-bottom: 0;
+        }
+        @include media(992px) {
+            padding-right: 3rem;
+            //padding-top: 4.5rem;
+            padding-bottom: 4.5rem;
+        }
+        @include media($container-width-in-px) {
+            position: relative;
+            &:after {
+                content: "";
+                display: block;
+                height: 100%;
+                width: 100vw;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: -100vw;
+            }
+        }
+        &.text-last {
+            @include media(992px) {
+                padding-right: $container-lateral-padding;
+                //padding-left: 3rem;
+            }
+            @include media(1470px) {
+                &:after {
+                    right: -100vw;
+                    left: auto;
+                }
+            }
+        }
+    }
+    .copy-image-text {
+        &.no-image {
+            .text-last {
+                padding-left: 0;
+            }
+        }
+    }
+    .copy-image-image {
+        position: relative;
+        z-index: 1;
+        // min-height: 25rem;
+        // max-height: 35rem;
+        @include media (1200px) {
+            //min-height: 0;
+            //max-height: 50rem;
+        }
+        img,
+        iframe {
+            //max-width: none;
+            width: 100%;
+        }
+        img,
+        iframe {
+            // @include absoluteImage;
+            // @include media (992px) {
+            //     left: 1.5rem;
+            //     top: 0rem;
+            //     bottom: 0rem;
+            //     width: 100%;
+            // }
+            // @include media (1470px) {
+            //     width: calc(((100vw - #{$container-width}) / 2) + 100%);
+            // }
+        }
+        &.img-first {
+            //margin-top: 3rem;
+            // img {
+            //     @include media (992px) {
+            //         //right: -3rem;
+            //         right: 1.5rem;
+            //         left: auto;
+            //     }
+            // }
+        }
+    }
+}

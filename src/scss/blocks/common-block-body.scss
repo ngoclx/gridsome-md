@@ -1,0 +1,8 @@
+.common-block-body {
+    margin-bottom: 5rem;
+    &.full-width {
+        .container {
+            max-width: none;
+        }
+    }
+}

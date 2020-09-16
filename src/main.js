@@ -5,6 +5,9 @@ import MenuItem from '~/components/MenuItem.vue'
 import LoadScript from 'vue-plugin-load-script';
 import _ from 'lodash'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
+
 export default function(Vue, { router, head, isClient }) {
     // Set default layout as a global component
     Vue.use(BootstrapVue)
@@ -22,11 +25,12 @@ export default function(Vue, { router, head, isClient }) {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.9.0/css/all.css',
     });
-    head.link.push({
-        rel: 'stylesheet',
-        href: 'https://cw.marameodesign.com/wp-content/themes/generatepress_child/style.css',
-    });
+    // head.link.push({
+    //     rel: 'stylesheet',
+    //     href: 'https://cw.marameodesign.com/wp-content/themes/generatepress_child/style.css',
+    // });
 }
 
+import '~/style.css'
 import '~/assets/css/wp.css'
 import '~/assets/css/maxmegamenu/style.css'

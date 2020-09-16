@@ -1,0 +1,46 @@
+.template-header {
+    .home & {
+        padding-top: 3rem;
+        margin-top: 0;
+        @include media(992px) {
+            padding-top: 0;
+        }
+    }
+    margin-top: -3rem;
+    margin-bottom: 7rem;
+    .row {
+        align-items: center;
+    }
+    .header-title {
+        font-size: 3.6rem;
+        margin-bottom: 1.5rem;
+        color: $main-blue;
+        text-transform: capitalize;
+    }
+    @include backgroundBlueOverlay;
+    .template-header-text {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        @include media(992px) {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    .template-header-img {
+        text-align: center;
+        @include media(768px) {
+            height: 42rem;
+        }
+        img {
+            height: auto;
+            width: auto;
+            object-fit: contain;
+            position: relative;
+            z-index: 2;
+            @include media(768px) {
+                width: auto;
+                height: 47rem;
+            }
+        }
+    }
+}

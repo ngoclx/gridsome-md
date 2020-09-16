@@ -1,0 +1,191 @@
+.the-header {
+    height: 7.2rem;
+    @include media(1200px) {
+        height: 12rem;
+    }
+}
+
+.site-header {
+    height: 7.2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    @include transition;
+    background: #fff;
+    z-index: 9;
+    &.sticky {
+        box-shadow: 0 0.3rem 1.2rem rgba(0, 0, 0, 0.2);
+        @include media(1200px) {
+            height: 10rem;
+            padding: 3rem 0;
+        }
+    }
+    .insideHeader {
+        .site-logo {
+            display: none;
+            @include media(1200px) {
+                display: block;
+            }
+        }
+    }
+    &.scrollUp {
+        transform: translateY(-7.2rem);
+        //box-shadow: 1px 1px 1px rgba(0, 0,0, 0.2)
+    }
+    @include media(1200px) {
+        height: 12rem;
+        padding: 4rem 0;
+        &.scrollUp {
+            transform: translateY(-12rem);
+            //box-shadow: 1px 1px 1px rgba(0, 0,0, 0.2)
+        }
+    }
+    h2 {
+        padding-bottom: 0;
+        position: static;
+        &::after {
+            content: none;
+        }
+    }
+    .insideHeader {
+        position: relative;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        @include media(1200px) {
+            display: block;
+        }
+    }
+    .site-logo {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+        @include media(992px) {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            top: 20px;
+            z-index: 10;
+            //left: 0;
+            width: 20rem;
+            @include media(1200px) {
+                width: 26rem;
+            }
+        }
+        @include media(1200px) {
+            top: 0;
+        }
+        img {
+            max-width: 15rem;
+            margin: 0 auto;
+            @include media(600px) {
+                max-width: 20rem;
+            }
+            @include media(768px) {
+                width: 100%;
+                max-width: 26rem;
+            }
+            @include media(992px) {
+                width: 100%;
+                margin: 0;
+            }
+        }
+        a,
+        h1 {
+            padding: 0;
+            margin: 0;
+            display: block;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+    .search-form {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100%;
+        position: relative;
+        label {
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            @include media(576px) {
+                flex: 1;
+            }
+        }
+        [type="search"] {
+            height: 100%;
+            border: 2px solid transparent;
+            padding: 1rem 2rem;
+            width: 100%;
+            &::-webkit-input-placeholder {
+                /* WebKit browsers */
+                color: $dark-blue;
+            }
+            &:-moz-placeholder {
+                /* Mozilla Firefox 4 to 18 */
+                color: $dark-blue;
+                opacity: 1;
+            }
+            &::-moz-placeholder {
+                /* Mozilla Firefox 19+ */
+                color: $dark-blue;
+                opacity: 1;
+            }
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10+ */
+                color: $dark-blue;
+            }
+        }
+    }
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.title-result {
+    margin-top: 3rem;
+    font-weight: 700;
+    .term-query {}
+}
+
+.serp-result {
+    margin-bottom: 4rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid #E7EDF0;
+    h2 a {
+        text-decoration: none;
+        font-weight: 700;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+}
+
+.call-mobile {
+    position: absolute;
+    right: 7rem;
+    font-size: 1.3rem;
+    padding: 0.3rem 0.5rem;
+    right: 5rem;
+    &:after {
+        display: none;
+        @include media(600px) {
+            display: block;
+        }
+    }
+    @include media(375px) {
+        font-size: 1.4rem;
+        padding: 0.5rem 1rem;
+        right: 6rem;
+    }
+    @include media(600px) {
+        font-size: 1.8rem;
+        padding: .8rem 4rem .8rem 3rem;
+        right: 7rem;
+    }
+}

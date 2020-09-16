@@ -1,0 +1,48 @@
+.breadcrumbs {
+    background: $light-grey;
+    margin-bottom: 3rem;
+    .single-portfolio & {
+        margin-bottom: 3rem;
+        @include media(992px) {
+            margin-bottom: 0;
+        }
+    }
+    nav {
+        .breadcrumb {
+            background: transparent;
+            color: $dark-blue;
+            align-items: baseline;
+            padding: 0.2rem;
+            .breadcrumb-item {
+                font-size: 1.4rem;
+                &:after {
+                    content: "/";
+                    padding-left: 0.5rem;
+                    font-size: 1.5rem;
+                    color: $dark-blue;
+                }
+                &:before {
+                    display: none;
+                    padding: 0;
+                }
+                a {
+                    color: $body-text;
+                    text-decoration: none;
+                    &:hover,
+                    &:focus {
+                        color: $light-pink;
+                        //text-decoration: underline;
+                    }
+                }
+                &.active {
+                    font-size: 1.4rem;
+                    color: $main-blue;
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    color: $body-text;
+}

@@ -1,0 +1,13 @@
+.header-top {
+    &.text-center {
+        .narrow {
+            margin: 0 auto;
+        }
+    }
+    &.text-left {
+        .narrow {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}

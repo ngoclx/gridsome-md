@@ -20,7 +20,7 @@
 
 
 <style>
-@font-face {
+/* @font-face {
     font-family: 'GTWalsheimPro Medium';
     src: url("../fonts/GTWalsheimPro-Medium.ttf");
     font-weight: 500;
@@ -36,7 +36,7 @@
     font-family: 'GTWalsheimPro LightOblique';
     src: url("../fonts/GTWalsheimPro-LightOblique.ttf");
     font-weight: 300;
-}
+} */
 .breadcrumbs nav .breadcrumb .breadcrumb-item.active:after{
   display: none;
 }
