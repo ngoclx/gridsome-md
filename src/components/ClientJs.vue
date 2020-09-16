@@ -1,5 +1,5 @@
 <template>
-  <span class="custom-jquery"></span>
+    <span class="custom-jquery"></span>
 </template>
 
 <script>
@@ -7,8 +7,74 @@
 export default {
     name: 'ClientJs',
     metaInfo: {
-        script: [
-        ]
+        script: [{
+            type: 'application/ld+json',
+            json: {
+                "@context":"https:\/\/schema.org",
+                "@graph":[
+                {
+                    "@type":"WebSite",
+                    "@id":"https:\/\/marameodesign.com",
+                    "url":"https:\/\/marameodesign.com",
+                    "name":"Marameo Design",
+                    "potentialAction":{
+                        "@type":"SearchAction",
+                        "target":"https:\/\/marameodesign.com\/?s={search_term_string}",
+                        "query-input":"required name=search_term_string"
+                    }
+                },
+                {
+                    "@type":"Service",
+                    "name":"Sydney Website Design + Web Development Agency » Marameo",
+                    "description":"Marameo is a full-service web design agency, offering expert web design and development services with personalised care and support, at affordable prices.",
+                    "serviceType":"",
+                    "offers":{
+                        "@type":"Offer",
+                        "price":"0",
+                        "priceCurrency":""
+                    },
+                    "image":{
+                        "@type":"ImageObject",
+                        "image":"https:\/\/cw.marameodesign.com\/wp-content\/uploads\/2020\/09\/Marameo.png",
+                        "width":260,
+                        "height":38
+                    }
+                },
+                {
+                    "@type":"ProfessionalService",
+                    "@id":"https:\/\/marameodesign.com\/sydney-digital-agency",
+                    "name":"Marameo Design",
+                    "url":"https:\/\/marameodesign.com",
+                    "address":{
+                        "@type":"PostalAddress",
+                        "streetAddress":"Level 2, 243 King St",
+                        "addressLocality":"Newtown",
+                        "addressRegion":"NSW",
+                        "postalCode":"2042",
+                        "addressCountry":""
+                    },
+                    "review": {
+                        "@type": "Review",
+                        "reviewRating": {
+                        "@type": "Rating",
+                        "ratingValue": "5",
+                        "bestRating": "5"
+                        },
+                        "author": {
+                        "@type": "Person",
+                        "name": "Mara Milani"
+                        }
+                    },
+                    "openingHours":[
+                        "Monday,Tuesday,Wednesday,Thursday,Friday 09:00-17:30"
+                    ],
+                    "priceRange":"$$",
+                    "image":"https:\/\/cw.marameodesign.com\/wp-content\/uploads\/2020\/09\/Marameo.png",
+                    "telephone":"1300881791"
+                    }
+                ]
+            }
+        }]
     },
     mounted() {
         // Load external scripts for clients
