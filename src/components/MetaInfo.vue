@@ -76,6 +76,11 @@ export default {
                 property: item.property,
                 content: self.changeDomain(item.property, item.content),
               });
+              //Remove property description
+              if (item.property == 'description') {
+                var removeIndex = metaTags.map(function(item) { return item.property; }).indexOf('description');
+                metaTags.splice(removeIndex, 1);
+              }
             }
           }
         }
@@ -90,6 +95,7 @@ export default {
         { rel: 'canonical', href: canonicalLink }
       ]
     };
+
   },
   methods: {
     changeDomain(property, value) {
