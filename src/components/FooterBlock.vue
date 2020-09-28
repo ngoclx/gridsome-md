@@ -126,20 +126,20 @@
             <div class="copy col-lg-8">
               <p>
                 <g-link to="/"> Digital Agency in Sydney</g-link> specialising in 
-                <g-link to="/sydney-digital-agency/web-design/"> web design</g-link>, 
-                <g-link to="/sydney-digital-agency/web-development/"> web development</g-link>, 
-                <g-link to="/sydney-digital-agency/strategy-services/digital-strategy/"> user experience</g-link>, 
-                <g-link to="/sydney-digital-agency/strategy-services/web-accessibility/"> accessibility</g-link> and more. ©
+                <g-link to="/web-design/"> web design</g-link>, 
+                <g-link to="/web-development/"> web development</g-link>, 
+                <g-link to="/digital-strategy/"> user experience</g-link>, 
+                <g-link to="/web-accessibility/"> accessibility</g-link> and more. ©
                 {{ currentYear() }}
                 Marameo Design Pty Ltd.
               </p>
             </div>
             <div class="terms-and-policy col-lg-4">
               <p>
-                <g-link to="/accessibility-statement">Accessibility Statement</g-link> |
-                <g-link to="/privacy">Privacy</g-link> |
-                <g-link to="/terms">Terms</g-link> |
-                <g-link to="/sitemap.xml">Sitemap</g-link>
+                <g-link to="/accessibility-statement/">Accessibility Statement</g-link> |
+                <g-link to="/privacy/">Privacy</g-link> |
+                <g-link to="/terms/">Terms</g-link> |
+                <g-link to="/sitemap.xml/">Sitemap</g-link>
               </p>
             </div>
           </div>
