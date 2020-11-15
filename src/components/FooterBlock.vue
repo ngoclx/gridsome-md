@@ -139,7 +139,7 @@
                 <g-link to="/accessibility-statement/">Accessibility Statement</g-link> |
                 <g-link to="/privacy/">Privacy</g-link> |
                 <g-link to="/terms/">Terms</g-link> |
-                <g-link to="/sitemap.xml/">Sitemap</g-link>
+                <a href="/sitemap.xml/" target="_blank">Sitemap</a>
               </p>
             </div>
           </div>
