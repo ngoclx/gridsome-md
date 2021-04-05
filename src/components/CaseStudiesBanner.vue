@@ -1,5 +1,5 @@
 <template>
-  <div v-html="this.$static.data.content" />
+  <div v-if="this.$static.data && this.$static.data != 'null'" v-html="this.$static.data.content" />
 </template>
 
 

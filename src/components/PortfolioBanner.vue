@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="col-xl-5">
-                <div class="feat-img">
+                <div class="feat-img" v-if="banner.featuredMedia">
                   <g-image :src="banner.featuredMedia.sourceUrl"  :alt="banner.featuredMedia.altText" width="691" height="1024" class="attachment-large size-large wp-post-image" />
                 </div>
             </div>
