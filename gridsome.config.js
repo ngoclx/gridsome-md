@@ -17,6 +17,8 @@ module.exports = {
 
         // Define multiple alias for the same entity (page)
         WpPage: (node) => {
+            console.log(node.id)
+            console.log(node.link)
             return new URL(node.link).pathname
         }
     },
@@ -26,8 +28,8 @@ module.exports = {
                 baseUrl: 'https://cw.marameodesign.com', // required
                 apiBase: 'wp-json',
                 typeName: 'Wp',
-                perPage: 20,
-                concurrent: 10,
+                perPage: 10,
+                concurrent: 5,
                 customEndpoints: [{
                     typeName: "WPMenu",
 
