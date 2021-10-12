@@ -137,6 +137,7 @@
             <div class="terms-and-policy col-lg-4">
               <p>
                 <g-link to="/accessibility-statement/">Accessibility Statement</g-link> |
+                <g-link to="/warranty/">Warranty</g-link> |
                 <g-link to="/privacy/">Privacy</g-link> |
                 <g-link to="/terms/">Terms</g-link> |
                 <a href="/sitemap.xml/" target="_blank">Sitemap</a>
