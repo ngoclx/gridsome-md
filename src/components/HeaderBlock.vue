@@ -11,7 +11,7 @@
             <g-image
               class="header-image"
               :alt="$static.metadata.siteName"
-              src="~/images/marameo-logo.svg"
+              src="~/images/marameo-tagline.svg"
               :title="$static.metadata.siteName"
             />
           </g-link>
